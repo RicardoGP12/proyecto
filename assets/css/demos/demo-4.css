@@ -14,7 +14,7 @@
 .owl-theme .owl-nav [class*='owl-']{width:3.2rem;height:3.2rem;font-size:2rem;margin-top:-1.6rem}
 .owl-theme.owl-nav-inside .owl-nav .owl-prev{left:50%;margin-left:-584px}
 .owl-theme.owl-nav-inside .owl-nav .owl-next{right:50%;margin-right:-584px}
-.owl-theme.owl-light .owl-nav [class*='owl-']{border-color:rgba(255,255,255,0.7);background-color:rgba(255,255,255,0.7);color:#ccc}
+.owl-theme.owl-light .owl-nav [class*='owl-']{border-color:rgba(255, 255, 255, 0.7);background-color:rgba(255,255,255,0.7);color:#ccc}
 .owl-theme.owl-nav-inside .owl-dots{bottom:20px}
 .owl-full .owl-dots{bottom:-2rem}
 .cat-blocks-container{padding-top:.5rem}
@@ -101,7 +101,7 @@
 .icon-box-side .icon-box-title{font-weight:600;margin-bottom:.2rem}
 .icon-box-side p{font-size:1.6rem;letter-spacing:-.01em}
 .icon-box-side .icon-box-icon{font-size:4rem}
-.footer{background-color:#f5f6f9}
+.footer{background-color:#f7e924}
 .footer .footer-middle{border-top:none;padding:5rem 0 3.5rem}
 .footer .widget-title{font-weight:600}
 .widget-list a{position:relative}
