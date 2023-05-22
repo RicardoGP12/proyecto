@@ -28,6 +28,9 @@
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="Carrito2.js"></script>
+    <!-- Include the PayPal JavaScript SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AYvPMmklpRHBCEznpNynvGRSrLPmc349hNovn8_zObKQO2-KNm47oM5affoZPpAmmgeAbydqdeOlXy_B"></script>
+                
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JHKHEEV80"></script>
@@ -195,7 +198,37 @@
                         <p class="text-right">Total: <span id="total"></span>&euro;</p>
                         <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
                         <a href="checkout.html" class="btn btn-outline-primary-2 btn-order btn-block">Continuar</a>
+                        <div id="paypal-button-container"></div>
                     </aside>
+                    <div id="paypal-button-container"></div>
+                    <script>
+                        // Render the PayPal button into #paypal-button-container
+                        paypal.Buttons({
+                            style: {
+                                 shape:'blue',
+                                 label:'pay' 
+                            },
+                        crateOrder: function(data, actions){
+                            return actions.order.create({
+                                purchase_units: [{
+                                    amount: {
+                                        value: 14.99
+                                    }
+                                }]
+                            })
+                        },
+                        onApprove: function(data, actions){
+                            actions.order.capture().then(function(detalles){
+                                console.log(detalles);
+                            })
+                        },
+                        onCancel: function(data) {
+                            alert("Pago canselado");
+                            console.log(data);
+                        }
+                        
+                    }).render('#paypal-button-container');
+                    </script>
                 </div>
             </div>
         </main><!-- End .main -->
