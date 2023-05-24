@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Carrito</title>
+    <title>CoffeSmart - Carrito</title>
     <meta name="keywords" content="HTML5 Template">
-    <meta name="description" content="Molla - Bootstrap eCommerce Template">
-    <meta name="author" content="p-themes">
+    <meta name="description" content="Página web para ordenar comida de una forma más rápida y cómoda.">
+    <meta name="author" content="Ricardo Guerrero Prieto, María Fernanda Sánchez Lupercio, Eduardo Miguel López Flores, Vanessa García Lara">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
@@ -28,6 +28,9 @@
     <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="Carrito2.js"></script>
+    <!-- Include the PayPal JavaScript SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=Afms8KjtLLZoXBdslNAubR3TAl-Ivza6apDd82j4x1cD2gHQbDcuJQGgof0L-Aiu7ENmTNsOlilQ-uli&currency=MXN"></script>
+                
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JHKHEEV80"></script>
@@ -79,7 +82,7 @@
                         </button>
                         
                         <a href="index.html" class="logo">
-                            <img src="assets/images/demos/demo-4/logo.png" alt="Molla Logo" width="105" height="25">
+                            <img title="Logo" src="assets/images/demos/demo-4/logo.png" alt="Molla Logo" width="105" height="25">
                         </a>
                     </div><!-- End .header-left -->
 
@@ -121,7 +124,7 @@
 
                                         <figure class="product-image-container">
                                             <a href="product.html" class="product-image">
-                                                <img src="assets/images/demos/demo-4/products/product-6.jpg" alt="product">
+                                                <img title="Producto 6" src="assets/images/demos/demo-4/products/product-6.jpg" alt="product">
                                             </a>
                                         </figure>
                                         <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
@@ -141,7 +144,7 @@
 
                                         <figure class="product-image-container">
                                             <a href="product.html" class="product-image">
-                                                <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="product">
+                                                <img title="Producto 3" src="assets/images/demos/demo-4/products/product-3.jpg" alt="product">
                                             </a>
                                         </figure>
                                         <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
@@ -195,7 +198,37 @@
                         <p class="text-right">Total: <span id="total"></span>&euro;</p>
                         <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
                         <a href="checkout.html" class="btn btn-outline-primary-2 btn-order btn-block">Continuar</a>
+                        <div id="paypal-button-container"></div>
                     </aside>
+                    <br/>
+                    <div id="paypal-button-container"></div>
+                    <script>
+                        // Render the PayPal button into #paypal-button-container
+                        paypal.Buttons({
+                            style: {
+                                 label:'pay' 
+                            },
+                        createOrder: function(data, actions){
+                            return actions.order.create({
+                                purchase_units: [{
+                                    amount: {
+                                        value: 14.99
+                                    }
+                                }]
+                            })
+                        },
+                        onApprove: function(data, actions){
+                            actions.order.capture().then(function(detalles){
+                                console.log(detalles);
+                            })
+                        },
+                        onCancel: function(data) {
+                            alert("Pago canselado");
+                            console.log(data);
+                        }
+                        
+                    }).render('#paypal-button-container');
+                    </script>
                 </div>
             </div>
         </main><!-- End .main -->
@@ -250,7 +283,7 @@
 	        	<div class="container">
 	        		<p class="footer-copyright">Copyright © 2023 Cofee Smart. All Rights Reserved.</p><!-- End .footer-copyright -->
 	        		<figure class="footer-payments">
-	        			<img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
+	        			<img title="Payment" src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
 	        		</figure><!-- End .footer-payments -->
 	        	</div><!-- End .container -->
 	        </div><!-- End .footer-bottom -->
