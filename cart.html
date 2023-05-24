@@ -200,6 +200,7 @@
                         <a href="checkout.html" class="btn btn-outline-primary-2 btn-order btn-block">Continuar</a>
                         <div id="paypal-button-container"></div>
                     </aside>
+                    <br/>
                     <div id="paypal-button-container"></div>
                     <script>
                         // Render the PayPal button into #paypal-button-container
@@ -207,7 +208,7 @@
                             style: {
                                  label:'pay' 
                             },
-                        crateOrder: function(data, actions){
+                        createOrder: function(data, actions){
                             return actions.order.create({
                                 purchase_units: [{
                                     amount: {
@@ -218,6 +219,7 @@
                         },
                         onApprove: function(data, actions){
                             actions.order.capture().then(function(detalles){
+                                alert("Pago Realizado :)");
                                 console.log(detalles);
                             })
                         },
