@@ -3,6 +3,7 @@
 
 
 <!-- molla/index-4.html  22 Nov 2019 09:53:08 GMT -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +11,11 @@
     <title>CoffeSmart - eCommerce</title>
     <meta name="keywords" content="HTML5 Template">
     <meta name="description" content="Página web para ordenar comida de una forma más rápida y cómoda.">
-    <meta name="author" content="Ricardo Guerrero Prieto, María Fernanda Sánchez Lupercio, Eduardo Miguel López Flores, Vanessa García Lara">
+    <meta name="author"
+        content="Ricardo Guerrero Prieto, María Fernanda Sánchez Lupercio, Eduardo Miguel López Flores, Vanessa García Lara">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png" title="Icono principal">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png"
+        title="Icono principal">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
     <link rel="manifest" href="assets/images/icons/site.html">
@@ -35,24 +38,64 @@
     <link rel="stylesheet" href="assets/css/demos/demo-4.css">
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="Ocultar.js"></script>
 
 <link rel="stylesheet" href="cookiebanner.style.css">
 <script src="cookiebanner.script.js"></script>
 <style>
-        *{margin:0;padding:0;text-decoration:none;list-style:none;box-sizing:border-box;}
-    </style>
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+    }
+</style>
 <script>
-        $(document).ready(function() {
-            cookieBanner.init();
-        });
-    </script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7JHKHEEV80');
+    $(document).ready(function () {
+        cookieBanner.init();
+    });
 </script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-7JHKHEEV80');
+</script>
+
+
+
+<script>
+    function mostrarAZ() {
+        document.getElementById("A").style.display = "block";
+        document.getElementById("TODOS").style.display = "none";
+        document.getElementById("MENOS").style.display = "none";
+        document.getElementById("MAS").style.display = "none";
+
+    }
+    function mostrar$() {
+        document.getElementById("MENOS").style.display = "block";
+        document.getElementById("TODOS").style.display = "none";
+        document.getElementById("MAS").style.display = "none";
+        document.getElementById("A").style.display = "none";
+
+    }
+    function mostrar$$() {
+        document.getElementById("MAS").style.display = "block";
+        document.getElementById("TODOS").style.display = "none";
+        document.getElementById("A").style.display = "none";
+        document.getElementById("MENOS").style.display = "none";
+
+    }
+    function mostrarTodos() {
+        document.getElementById("TODOS").style.display = "block";
+        document.getElementById("A").style.display = "none";
+        document.getElementById("MENOS").style.display = "none";
+        document.getElementById("MAS").style.display = "none";
+    }
+</script>
+
 <body>
     <div class="page-wrapper">
         <header class="header header-intro-clearance header-4">
@@ -66,9 +109,11 @@
                                 <a title="1" href="#">Links</a>
                                 <ul>
 
-                                    <li><a title="2" href="#signin-modal" data-toggle="modal">Iniciar sesion / Registrarse</a></li>
-                                    <li><a title="Facebook" href="https://www.facebook.com/groups/216114187676516/?notif_id=1681154970666694&notif_t=group_admin&ref=notif">
-                                        <i class="icon-heart-o"></i>Facebook <span></span></a></li>
+                                    <li><a title="2" href="#signin-modal" data-toggle="modal">Iniciar sesion /
+                                            Registrarse</a></li>
+                                    <li><a title="Facebook"
+                                            href="https://www.facebook.com/groups/216114187676516/?notif_id=1681154970666694&notif_t=group_admin&ref=notif">
+                                            <i class="icon-heart-o"></i>Facebook <span></span></a></li>
                                 </ul>
                             </li>
                         </ul><!-- End .top-menu -->
@@ -84,20 +129,22 @@
                             <span class="sr-only">Toggle mobile menu</span>
                             <i class="icon-bars"></i>
                         </button>
-                        
+
                         <a title="4" href="index.html" class="logo">
-                            <img title="Logo" src="assets/images/demos/demo-4/logo.png" alt="Molla Logo" width="105" height="25">
+                            <img title="Logo" src="assets/images/demos/demo-4/logo.png" alt="Molla Logo" width="105"
+                                height="25">
                         </a>
                     </div><!-- End .header-left -->
 
                     <div class="header-center">
                         <div class="header-search header-search-extended header-search-visible d-none d-lg-block">
-                            <a  title="5" href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
+                            <a title="5" href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper search-wrapper-wide">
                                     <label for="q" class="sr-only">Buscar</label>
                                     <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
-                                    <input type="search" class="form-control" name="q" id="q" placeholder="Buscar producto..." required>
+                                    <input type="search" class="form-control" name="q" id="q"
+                                        placeholder="Buscar producto..." required>
                                 </div><!-- End .header-search-wrapper -->
                             </form>
                         </div><!-- End .header-search -->
@@ -115,7 +162,8 @@
                         </div><!-- End .compare-dropdown -->
 
                         <div class="dropdown cart-dropdown">
-                            <a  title="6" href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                            <a title="6" href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" data-display="static">
                                 <div class="icon">
                                     <i class="icon-shopping-cart"></i>
                                     <span class="cart-count">2</span>
@@ -124,57 +172,12 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right">
-                                <div class="dropdown-cart-products">
-                                    <div class="product">
-                                        <div class="product-cart-details">
-                                            <h4 class="product-title">
-                                                <a title="8" href="product.html">Chilaquiles Verdes con queso</a>
-                                            </h4>
-
-                                            <span class="cart-product-info">
-                                                <span class="cart-product-qty">1</span>
-                                                x $39.99
-                                            </span>
-                                        </div><!-- End .product-cart-details -->
-
-                                        <figure class="product-image-container">
-                                            <a  title="10"href="product.html" class="product-image">
-                                                <img title="product-6" src="assets/images/demos/demo-4/products/product-6.jpg" alt="product">
-                                            </a>
-                                        </figure>
-                                        <a title="11"href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
-                                    </div><!-- End .product -->
-
-                                    <div class="product">
-                                        <div class="product-cart-details">
-                                            <h4 class="product-title">
-                                                <a title="12"href="product.html">Coca-Cola Original Refresco Lata 235 ml</a>
-                                            </h4>
-
-                                            <span class="cart-product-info">
-                                                <span class="cart-product-qty">1</span>
-                                                x $14.99
-                                            </span>
-                                        </div><!-- End .product-cart-details -->
-
-                                        <figure class="product-image-container">
-                                            <a title="12" href="product.html" class="product-image">
-                                                <img title="product-3" src="assets/images/demos/demo-4/products/product-3.jpg" alt="product">
-                                            </a>
-                                        </figure>
-                                        <a title="13" href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
-                                    </div><!-- End .product -->
-                                </div><!-- End .cart-product -->
-
-                                <div class="dropdown-cart-total">
-                                    <span>Total</span>
-
-                                    <span class="cart-total-price">54.99</span>
-                                </div><!-- End .dropdown-cart-total -->
 
                                 <div class="dropdown-cart-action">
                                     <a title="cart" href="cart.html" class="btn btn-primary">Ver Carrito</a>
-                                    <a title="15" href="checkout.html" class="btn btn-outline-primary-2"><span>Comprar</span><i class="icon-long-arrow-right"></i></a>
+                                    <a title="15" href="checkout.html"
+                                        class="btn btn-outline-primary-2"><span>Comprar</span><i
+                                            class="icon-long-arrow-right"></i></a>
                                 </div><!-- End .dropdown-cart-total -->
                             </div><!-- End .dropdown-menu -->
                         </div><!-- End .cart-dropdown -->
@@ -185,21 +188,7 @@
             <div class="header-bottom sticky-header">
                 <div class="container">
                     <div class="header-left">
-                        <div class="dropdown category-dropdown">
-                            <a title="17" title="16" href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static" title="Browse Categories">
-                                Categorias <i class="icon-angle-down"></i>
-                            </a>
 
-                            <div class="dropdown-menu">
-                                <nav class="side-nav">
-                                    <ul class="menu-vertical sf-arrows">
-                                        <li class="item-lead"><a href="#">Comida</a></li>
-                                        <li class="item-lead"><a href="#">Bebidas</a></li>
-                                        <li class="item-lead"><a href="#">Snacks</a></li>
-                                    </ul><!-- End .menu-vertical -->
-                                </nav><!-- End .side-nav -->
-                            </div><!-- End .dropdown-menu -->
-                        </div><!-- End .category-dropdown -->
                     </div><!-- End .header-left -->
 
                     <div class="header-center">
@@ -210,7 +199,7 @@
                                 </li>
 
                                 <li>
-                                    <a title="18" href="login.html" class="sf-with-ul">Loginn</a>
+                                    <a title="18" href="login.html" class="sf-with-ul">Login</a>
                                 </li>
 
                                 <li>
@@ -228,7 +217,7 @@
 
         <main class="main">
             <div class="intro-slider-container mb-5">
-                <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl" 
+                <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl"
                     data-owl-options='{
                         "dots": true,
                         "nav": false, 
@@ -239,11 +228,13 @@
                             }
                         }
                     }'>
-                    <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/slide-1.jpg);">
+                    <div class="intro-slide"
+                        style="background-image: url(assets/images/demos/demo-4/slider/slide-1.jpg);">
                         <div class="container intro-content">
                             <div class="row justify-content-end">
                                 <div class="col-auto col-sm-7 col-md-6 col-lg-5">
-                                    <h3 class="intro-subtitle text-third">Ofertas y Promociones</h3><!-- End .h3 intro-subtitle -->
+                                    <h3 class="intro-subtitle text-third">Ofertas y Promociones</h3>
+                                    <!-- End .h3 intro-subtitle -->
                                     <h1 class="intro-title">Descuento</h1>
                                     <h1 class="intro-title">En todas las comidas</h1><!-- End .intro-title -->
 
@@ -263,12 +254,15 @@
                         </div><!-- End .intro-content -->
                     </div><!-- End .intro-slide -->
 
-                    <div class="intro-slide" style="background-image: url(assets/images/demos/demo-4/slider/slide-2.jpg);">
+                    <div class="intro-slide"
+                        style="background-image: url(assets/images/demos/demo-4/slider/slide-2.jpg);">
                         <div class="container intro-content">
                             <div class="row justify-content-end">
                                 <div class="col-auto col-sm-7 col-md-6 col-lg-5">
-                                    <h3 class="intro-subtitle text-primary">Nuevo menu</h3><!-- End .h3 intro-subtitle -->
-                                    <h1 class="intro-title">Hamburguesa doble carne<br> y papas</h1><!-- End .intro-title -->
+                                    <h3 class="intro-subtitle text-primary">Nuevo menu</h3>
+                                    <!-- End .h3 intro-subtitle -->
+                                    <h1 class="intro-title">Hamburguesa doble carne<br> y papas</h1>
+                                    <!-- End .intro-title -->
 
                                     <div class="intro-price">
                                         <sup>Solo Hoy:</sup>
@@ -300,27 +294,36 @@
                         <h2 class="title">Nuevos productos :O</h2><!-- End .title -->
                     </div><!-- End .heading-left -->
 
-                   <div class="heading-right">
+                    <div class="heading-right">
                         <ul class="nav nav-pills nav-border-anim justify-content-center" role="tablist">
                             <li class="nav-item">
-                                <a title="ss" class="nav-link active" id="new-all-link" data-toggle="tab" href="#new-all-tab" role="tab" aria-controls="new-all-tab" aria-selected="true">Todo</a>
+                                <button title="ss" class="nav-link active" id="new-all-link" data-toggle="tab"
+                                    onclick=" mostrarTodos()" role="tab" aria-controls="new-all-tab"
+                                    aria-selected="true">Todo</button>
                             </li>
                             <li class="nav-item">
-                                <a title="as" class="nav-link" id="new-tv-link" data-toggle="tab" href="#new-tv-tab" role="tab" aria-controls="new-tv-tab" aria-selected="false">Comida</a>
+                                <button title="as" class="nav-link" id="new-tv-link" data-toggle="tab"
+                                    onclick="mostrarAZ()" role="tab" aria-controls="new-tv-tab"
+                                    aria-selected="false">A-Z</button>
                             </li>
                             <li class="nav-item">
-                                <a title="ss" class="nav-link" id="new-computers-link" data-toggle="tab" href="#new-computers-tab" role="tab" aria-controls="new-computers-tab" aria-selected="false">Bebidas</a>
+                                <button title="ss" class="nav-link" id="new-computers-link" data-toggle="tab"
+                                    onclick="mostrar$()" role="tab" aria-controls="new-computers-tab"
+                                    aria-selected="false">$-$$</button>
                             </li>
                             <li class="nav-item">
-                                <a title="ss" class="nav-link" id="new-phones-link" data-toggle="tab" href="#new-phones-tab" role="tab" aria-controls="new-phones-tab" aria-selected="false">Snacks</a>
+                                <button title="ss" class="nav-link" id="new-phones-link" data-toggle="tab"
+                                    onclick="mostrar$$()" role="tab" aria-controls="new-phones-tab"
+                                    aria-selected="false">$$-$</button>
                             </li>
                         </ul>
-                   </div><!-- End .heading-right -->
+                    </div><!-- End .heading-right -->
                 </div><!-- End .heading -->
 
-                <div class="tab-content tab-content-carousel just-action-icons-sm">
-                    <div class="tab-pane p-0 fade show active" id="new-all-tab" role="tabpanel" aria-labelledby="new-all-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                <div class="tab-content tab-content-carousel just-action-icons-sm" id="TODOS">
+                    <div class="tab-pane p-0 fade show active" id="new-all-tab" role="tabpanel"
+                        aria-labelledby="new-all-link">
+                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl"
                             data-owl-options='{
                                 "nav": true, 
                                 "dots": true,
@@ -348,16 +351,20 @@
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a title="22" href="product.html">
-                                        <img title="product-1" src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
+                                        <img title="product-1" src="assets/images/demos/demo-4/products/product-1.jpg"
+                                            alt="Product image" class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a title="23" href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
+                                        <a title="23" href="#" class="btn-product-icon btn-wishlist"
+                                            title="Add to wishlist"></a>
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a title="12" href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a title="12" href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a title="12" href="#" class="btn-product btn-cart"
+                                            title="Add to cart"><span>add to cart</span></a>
+                                        <a title="12" href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -365,13 +372,15 @@
                                     <div class="product-cat">
                                         <a title="12" href="#">Comida</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a title="12" href="product5.html">Double Western Bacon Cheeseburger</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a title="12" href="product5.html">Double Western Bacon
+                                            Cheeseburger</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $130.00
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 4 Reviews )</span>
                                     </div><!-- End .rating-container -->
@@ -380,17 +389,21 @@
 
                             <div class="product product-2">
                                 <figure class="product-media">
-                                    <a  title="21" href="product.html">
-                                        <img title="product-2" src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image" class="product-image">
+                                    <a title="21" href="product.html">
+                                        <img title="product-2" src="assets/images/demos/demo-4/products/product-2.jpg"
+                                            alt="Product image" class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a title="21" href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
+                                        <a title="21" href="#" class="btn-product-icon btn-wishlist"
+                                            title="Add to wishlist"></a>
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a title="21" href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a title="21" href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a title="21" href="#" class="btn-product btn-cart"
+                                            title="Add to cart"><span>add to cart</span></a>
+                                        <a title="21" href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -398,7 +411,8 @@
                                     <div class="product-cat">
                                         <a title="21" href="#">Snacks</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a title="21" href="product.html">Takis Tortillas de Maíz Sabor a Fuego</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a title="21" href="product.html">Takis Tortillas de Maíz
+                                            Sabor a Fuego</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $15.00
                                     </div><!-- End .product-price -->
@@ -415,7 +429,8 @@
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-new">New</span>
                                     <a title="21" href="product.html">
-                                        <img title="product-3_2" src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image" class="product-image">
+                                        <img title="product-3_2" src="assets/images/demos/demo-4/products/product-3.jpg"
+                                            alt="Product image" class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -423,8 +438,10 @@
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a title="21" href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a title="21" href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -432,7 +449,8 @@
                                     <div class="product-cat">
                                         <a title="21" href="#">Bebidas</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a title="21" href="product.html">Coca-Cola Original Refresco Lata 235 ml </a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a title="21" href="product.html">Coca-Cola Original
+                                            Refresco Lata 235 ml </a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $14.99
                                     </div><!-- End .product-price -->
@@ -449,16 +467,20 @@
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a title="21" href="product.html">
-                                        <img title="product-4" src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image" class="product-image">
+                                        <img title="product-4" src="assets/images/demos/demo-4/products/product-4.jpg"
+                                            alt="Product image" class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
-                                        <a title="21" href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
+                                        <a title="21" href="#" class="btn-product-icon btn-wishlist"
+                                            title="Add to wishlist"></a>
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a title="21" href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a title="21" href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a title="21" href="#" class="btn-product btn-cart"
+                                            title="Add to cart"><span>add to cart</span></a>
+                                        <a title="21" href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -466,13 +488,15 @@
                                     <div class="product-cat">
                                         <a title="21" href="#">Bebidas</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a title="21" href="product.html">Coca Cola Normal De 500 Ml Pet</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a title="21" href="product.html">Coca Cola Normal De 500
+                                            Ml Pet</a></h3><!-- End .product-title -->
                                     <div class="product-price">
-                                        $14.99
+                                        $16.99
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 10 Reviews )</span>
                                     </div><!-- End .rating-container -->
@@ -483,7 +507,8 @@
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a title="21" href="product.html">
-                                        <img title="product-5" src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image" class="product-image">
+                                        <img title="product-5" src="assets/images/demos/demo-4/products/product-5.jpg"
+                                            alt="Product image" class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -491,8 +516,10 @@
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a title="21" href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a title="21" href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -500,7 +527,8 @@
                                     <div class="product-cat">
                                         <a href="#">Comida</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a title="21" href="product.html">Chilaquiles Rojos con queso</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a title="21" href="product.html">Chilaquiles Rojos con
+                                            queso</a></h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $39.99
                                     </div><!-- End .product-price -->
@@ -517,7 +545,8 @@
                                 <figure class="product-media">
                                     <span class="product-label label-circle label-top">Top</span>
                                     <a href="product1.html">
-                                        <img title="product-6" src="assets/images/demos/demo-4/products/product-6.jpg" alt="Product image" class="product-image">
+                                        <img title="product-6" src="assets/images/demos/demo-4/products/product-6.jpg"
+                                            alt="Product image" class="product-image">
                                     </a>
 
                                     <div class="product-action-vertical">
@@ -525,8 +554,10 @@
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
+                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                                cart</span></a>
+                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                            title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -534,1078 +565,1007 @@
                                     <div class="product-cat">
                                         <a href="#">Laptops</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product1.html">Chilaquiles Verdes con queso</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a href="product1.html">Chilaquiles Verdes con queso</a>
+                                    </h3><!-- End .product-title -->
                                     <div class="product-price">
                                         $39.99
                                     </div><!-- End .product-price -->
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                            <div class="ratings-val" style="width: 100%;"></div>
+                                            <!-- End .ratings-val -->
                                         </div><!-- End .ratings -->
                                         <span class="ratings-text">( 4 Reviews )</span>
                                     </div><!-- End .rating-container -->
                                 </div><!-- End .product-body -->
                             </div><!-- End .product -->
                         </div><!-- End .owl-carousel -->
-                    </div><!-- .End .tab-pane -->
-            <!--End of first page-->
-
-                    <div class="tab-pane p-0 fade" id="new-tv-tab" role="tabpanel" aria-labelledby="new-tv-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
-                            data-owl-options='{
-                                "nav": true, 
-                                "dots": true,
-                                "margin": 20,
-                                "loop": false,
-                                "responsive": {
-                                    "0": {
-                                        "items":2
-                                    },
-                                    "480": {
-                                        "items":2
-                                    },
-                                    "768": {
-                                        "items":3
-                                    },
-                                    "992": {
-                                        "items":4
-                                    },
-                                    "1200": {
-                                        "items":5
-                                    }
-                                }
-                            }'>
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-top">Top</span>
-                                    <a href="product.html">
-                                        <img title="product-1" src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Comida</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Double Western Bacon Cheeseburger</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $130.00
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <a href="product.html">
-                                        <img title="product-2" src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Snacks</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Takis Tortillas de Maíz Sabor a Fuego</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $15.00
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 6 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-new">New</span>
-                                    <a href="product.html">
-                                        <img title="product-3" src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Bebidas</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Coca-Cola Original Refresco Lata 235 ml </a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $14.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-top">Top</span>
-                                    <a href="product.html">
-                                        <img title="product-4" src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Bebidas</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Coca Cola Normal De 500 Ml Pet</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $14.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 10 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-top">Top</span>
-                                    <a href="product.html">
-                                        <img title="product-5" src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Comida</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Chilaquiles Rojos con queso</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $39.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 5 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-top">Top</span>
-                                    <a href="product.html">
-                                        <img title="product-6" src="assets/images/demos/demo-4/products/product-6.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Comida</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Chilaquiles Verdes con queso</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $39.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .owl-carousel -->
-                    </div><!-- .End .tab-pane -->
-
-                    <div class="tab-pane p-0 fade" id="new-computers-tab" role="tabpanel" aria-labelledby="new-computers-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
-                            data-owl-options='{
-                                "nav": true, 
-                                "dots": true,
-                                "margin": 20,
-                                "loop": false,
-                                "responsive": {
-                                    "0": {
-                                        "items":2
-                                    },
-                                    "480": {
-                                        "items":2
-                                    },
-                                    "768": {
-                                        "items":3
-                                    },
-                                    "992": {
-                                        "items":4
-                                    },
-                                    "1200": {
-                                        "items":5
-                                    }
-                                }
-                            }'>
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-top">Top</span>
-                                    <a href="product.html">
-                                        <img title="product-1" src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Comida</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Double Western Bacon Cheeseburger</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $130.00
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <a href="product.html">
-                                        <img title="product-2" src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Snacks</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Takis Tortillas de Maíz Sabor a Fuego</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $15.00
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 6 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-new">New</span>
-                                    <a href="product.html">
-                                        <img title="product-3" src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Bebidas</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Coca-Cola Original Refresco Lata 235 ml </a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $14.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-top">Top</span>
-                                    <a href="product.html">
-                                        <img title="product-4" src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Bebidas</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Coca Cola Normal De 500 Ml Pet</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $14.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 10 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-top">Top</span>
-                                    <a href="product.html">
-                                        <img title="product-5" src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Comida</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Chilaquiles Rojos con queso</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $39.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 5 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-top">Top</span>
-                                    <a href="product1.html">
-                                        <img title="product-6" src="assets/images/demos/demo-4/products/product-6.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Comida</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product1.html">Chilaquiles Verdes con queso</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $39.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .owl-carousel -->
-                    </div><!-- .End .tab-pane -->
-
-                    <div class="tab-pane p-0 fade" id="new-phones-tab" role="tabpanel" aria-labelledby="new-phones-link">
-                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" 
-                            data-owl-options='{
-                                "nav": true, 
-                                "dots": true,
-                                "margin": 20,
-                                "loop": false,
-                                "responsive": {
-                                    "0": {
-                                        "items":2
-                                    },
-                                    "480": {
-                                        "items":2
-                                    },
-                                    "768": {
-                                        "items":3
-                                    },
-                                    "992": {
-                                        "items":4
-                                    },
-                                    "1200": {
-                                        "items":5
-                                    }
-                                }
-                            }'>
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-top">Top</span>
-                                    <a href="product.html">
-                                        <img title="product-1" src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Comida</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Double Western Bacon Cheeseburger</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $130.00
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <a href="product.html">
-                                        <img title="product-2" src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Snacks</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Takis Tortillas de Maíz Sabor a Fuego</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $15.00
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 6 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-new">New</span>
-                                    <a href="product.html">
-                                        <img title="product-3" src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Bebidas</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Coca-Cola Original Refresco Lata 235 ml </a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $14.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-top">Top</span>
-                                    <a href="product.html">
-                                        <img title="product-4" src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Bebidas</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Coca Cola Normal De 500 Ml Pet</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $14.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 10 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-top">Top</span>
-                                    <a href="product.html">
-                                        <img title="product-5" src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Comida</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Chilaquiles Rojos con queso</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $39.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 5 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-top">Top</span>
-                                    <a href="product1.html">
-                                        <img title="product-6" src="assets/images/demos/demo-4/products/product-6.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Comida</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product1.html">Chilaquiles Verdes con queso</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $39.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .owl-carousel -->
-                    </div><!-- .End .tab-pane -->
-                </div><!-- End .tab-content -->
-            </div><!-- End .container -->
-
-            <div class="mb-6"></div><!-- End .mb-6 -->
-
-
-            <div class="mb-5"></div><!-- End .mb-5 -->
-
-            <div class="container for-you">
-                <div class="heading heading-flex mb-3">
-                    <div class="heading-left">
-                        <h2 class="title">Productos recomendados</h2><!-- End .title -->
-                    </div><!-- End .heading-left -->
-
-                   <div class="heading-right">
-                        <a href="#" class="title-link">Ver todos los productos <i class="icon-long-arrow-right"></i></a>
-                   </div><!-- End .heading-right -->
-                </div><!-- End .heading -->
-
-                <div class="products">
-                    <div class="row justify-content-center">
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-top">Top</span>
-                                    <a href="product5.html">
-                                        <img title="product-1" src="assets/images/demos/demo-4/products/product-1.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Comida</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product5.html">Double Western Bacon Cheeseburger</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $130.00
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <a href="product6.html">
-                                        <img title="product-2" src="assets/images/demos/demo-4/products/product-2.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Snacks</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product6.html">Takis Tortillas de Maíz Sabor a Fuego</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $15.00
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 2 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <span class="product-label label-circle label-new">New</span>
-                                    <a href="product.html">
-                                        <img title="product-3" src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Bebidas</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product.html">Coca-Cola Original Refresco Lata 235 ml </a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $14.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <a href="product7.html">
-                                        <img title="product-4" src="assets/images/demos/demo-4/products/product-4.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Bebidas</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product7.html">Coca Cola Normal De 500 Ml Pet</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $14.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 10 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <a href="product2.html">
-                                        <img title="product-5" src="assets/images/demos/demo-4/products/product-5.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Comida</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product2.html">Chilaquiles Rojos con queso</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $39.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 5 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <a href="product1.html">
-                                        <img title="product-6" src="assets/images/demos/demo-4/products/product-6.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Comida</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product1.html">Chilaquiles Verdes con queso</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $39.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <a href="product3.html">
-                                        <img title="product-7" src="assets/images/demos/demo-4/products/product-7.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Comida</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product3.html">Torta de jamon con queso</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $29.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <div class="product product-2">
-                                <figure class="product-media">
-                                    <a href="product4.html">
-                                        <img title="product-9" src="assets/images/demos/demo-4/products/product-9.jpg" alt="Product image" class="product-image">
-                                    </a>
-
-                                    <div class="product-action-vertical">
-                                        <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"></a>
-                                    </div><!-- End .product-action -->
-
-                                    <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview" title="Quick view"><span>quick view</span></a>
-                                    </div><!-- End .product-action -->
-                                </figure><!-- End .product-media -->
-
-                                <div class="product-body">
-                                    <div class="product-cat">
-                                        <a href="#">Snacks</a>
-                                    </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="product4.html">Papas fritas Sabritas Original 160 g</a></h3><!-- End .product-title -->
-                                    <div class="product-price">
-                                        $14.99
-                                    </div><!-- End .product-price -->
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <span class="ratings-text">( 4 Reviews )</span>
-                                    </div><!-- End .rating-container -->
-                                </div><!-- End .product-body -->
-                            </div><!-- End .product -->
-                        </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
-                    </div><!-- End .row -->
-                </div><!-- End .products -->
-            </div><!-- End .container -->
-
-            <div class="mb-4"></div><!-- End .mb-4 -->
-
-            <div class="container">
-                <hr class="mb-0">
-            </div><!-- End .container -->
+                    </div>
+                </div>
+
+                        <!------------------------------------------------------------------------------------------------------------------>
+                        <div class="tab-content tab-content-carousel just-action-icons-sm" id="A">
+                            <div class="tab-pane p-0 fade show active" id="new-all-tab" role="tabpanel"
+                                aria-labelledby="new-all-link">
+                                <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow"
+                                    data-toggle="owl" data-owl-options='{
+                "nav": true, 
+                "dots": true,
+                "margin": 20,
+                "loop": false,
+                "responsive": {
+                    "0": {
+                        "items":2
+                    },
+                    "480": {
+                        "items":2
+                    },
+                    "768": {
+                        "items":3
+                    },
+                    "992": {
+                        "items":4
+                    },
+                    "1200": {
+                        "items":5
+                    }
+                }
+            }'>
+                                    <div class="product product-2">
+                                        <figure class="product-media">
+                                            <span class="product-label label-circle label-top">Top</span>
+                                            <a title="21" href="product.html">
+                                                <img title="product-5"
+                                                    src="assets/images/demos/demo-4/products/product-5.jpg"
+                                                    alt="Product image" class="product-image">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a href="#" class="btn-product-icon btn-wishlist"
+                                                    title="Add to wishlist"></a>
+                                            </div><!-- End .product-action -->
+
+                                            <div class="product-action">
+                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add
+                                                        to cart</span></a>
+                                                <a title="21" href="popup/quickView.html"
+                                                    class="btn-product btn-quickview" title="Quick view"><span>quick
+                                                        view</span></a>
+                                            </div><!-- End .product-action -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <div class="product-cat">
+                                                <a href="#">Comida</a>
+                                            </div><!-- End .product-cat -->
+                                            <h3 class="product-title"><a title="21" href="product.html">Chilaquiles
+                                                    Rojos con queso</a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                                $39.99
+                                            </div><!-- End .product-price -->
+                                            <div class="ratings-container">
+                                                <div class="ratings">
+                                                    <div class="ratings-val" style="width: 60%;"></div>
+                                                    <!-- End .ratings-val -->
+                                                </div><!-- End .ratings -->
+                                                <span class="ratings-text">( 5 Reviews )</span>
+                                            </div><!-- End .rating-container -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+
+                                    <div class="product product-2">
+                                        <figure class="product-media">
+                                            <span class="product-label label-circle label-top">Top</span>
+                                            <a href="product1.html">
+                                                <img title="product-6"
+                                                    src="assets/images/demos/demo-4/products/product-6.jpg"
+                                                    alt="Product image" class="product-image">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a href="#" class="btn-product-icon btn-wishlist"
+                                                    title="Add to wishlist"></a>
+                                            </div><!-- End .product-action -->
+
+                                            <div class="product-action">
+                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add
+                                                        to cart</span></a>
+                                                <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                                    title="Quick view"><span>quick view</span></a>
+                                            </div><!-- End .product-action -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <div class="product-cat">
+                                                <a href="#">Comida</a>
+                                            </div><!-- End .product-cat -->
+                                            <h3 class="product-title"><a href="product1.html">Chilaquiles Verdes con
+                                                    queso</a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                                $39.99
+                                            </div><!-- End .product-price -->
+                                            <div class="ratings-container">
+                                                <div class="ratings">
+                                                    <div class="ratings-val" style="width: 100%;"></div>
+                                                    <!-- End .ratings-val -->
+                                                </div><!-- End .ratings -->
+                                                <span class="ratings-text">( 4 Reviews )</span>
+                                            </div><!-- End .rating-container -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+
+                                    <div class="product product-2">
+                                        <figure class="product-media">
+                                            <span class="product-label label-circle label-top">Top</span>
+                                            <a title="21" href="product.html">
+                                                <img title="product-4"
+                                                    src="assets/images/demos/demo-4/products/product-4.jpg"
+                                                    alt="Product image" class="product-image">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a title="21" href="#" class="btn-product-icon btn-wishlist"
+                                                    title="Add to wishlist"></a>
+                                            </div><!-- End .product-action -->
+
+                                            <div class="product-action">
+                                                <a title="21" href="#" class="btn-product btn-cart"
+                                                    title="Add to cart"><span>add to cart</span></a>
+                                                <a title="21" href="popup/quickView.html"
+                                                    class="btn-product btn-quickview" title="Quick view"><span>quick
+                                                        view</span></a>
+                                            </div><!-- End .product-action -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <div class="product-cat">
+                                                <a title="21" href="#">Bebidas</a>
+                                            </div><!-- End .product-cat -->
+                                            <h3 class="product-title"><a title="21" href="product.html">Coca Cola Normal
+                                                    De 500 Ml Pet</a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                                $16.99
+                                            </div><!-- End .product-price -->
+                                            <div class="ratings-container">
+                                                <div class="ratings">
+                                                    <div class="ratings-val" style="width: 100%;"></div>
+                                                    <!-- End .ratings-val -->
+                                                </div><!-- End .ratings -->
+                                                <span class="ratings-text">( 10 Reviews )</span>
+                                            </div><!-- End .rating-container -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+
+                                    <div class="product product-2">
+                                        <figure class="product-media">
+                                            <span class="product-label label-circle label-new">New</span>
+                                            <a title="21" href="product.html">
+                                                <img title="product-3_2"
+                                                    src="assets/images/demos/demo-4/products/product-3.jpg"
+                                                    alt="Product image" class="product-image">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a href="#" class="btn-product-icon btn-wishlist"
+                                                    title="Add to wishlist"></a>
+                                            </div><!-- End .product-action -->
+
+                                            <div class="product-action">
+                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add
+                                                        to cart</span></a>
+                                                <a title="21" href="popup/quickView.html"
+                                                    class="btn-product btn-quickview" title="Quick view"><span>quick
+                                                        view</span></a>
+                                            </div><!-- End .product-action -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <div class="product-cat">
+                                                <a title="21" href="#">Bebidas</a>
+                                            </div><!-- End .product-cat -->
+                                            <h3 class="product-title"><a title="21" href="product.html">Coca-Cola
+                                                    Original Refresco Lata 235 ml </a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                                $14.99
+                                            </div><!-- End .product-price -->
+                                            <div class="ratings-container">
+                                                <div class="ratings">
+                                                    <div class="ratings-val" style="width: 80%;"></div>
+                                                    <!-- End .ratings-val -->
+                                                </div><!-- End .ratings -->
+                                                <span class="ratings-text">( 4 Reviews )</span>
+                                            </div><!-- End .rating-container -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+
+
+
+                                    <div class="product product-2">
+                                        <figure class="product-media">
+                                            <span class="product-label label-circle label-top">Top</span>
+                                            <a title="22" href="product.html">
+                                                <img title="product-1"
+                                                    src="assets/images/demos/demo-4/products/product-1.jpg"
+                                                    alt="Product image" class="product-image">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a title="23" href="#" class="btn-product-icon btn-wishlist"
+                                                    title="Add to wishlist"></a>
+                                            </div><!-- End .product-action -->
+
+                                            <div class="product-action">
+                                                <a title="12" href="#" class="btn-product btn-cart"
+                                                    title="Add to cart"><span>add to cart</span></a>
+                                                <a title="12" href="popup/quickView.html"
+                                                    class="btn-product btn-quickview" title="Quick view"><span>quick
+                                                        view</span></a>
+                                            </div><!-- End .product-action -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <div class="product-cat">
+                                                <a title="12" href="#">Comida</a>
+                                            </div><!-- End .product-cat -->
+                                            <h3 class="product-title"><a title="12" href="product5.html">Double Western
+                                                    Bacon Cheeseburger</a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                                $130.00
+                                            </div><!-- End .product-price -->
+                                            <div class="ratings-container">
+                                                <div class="ratings">
+                                                    <div class="ratings-val" style="width: 100%;"></div>
+                                                    <!-- End .ratings-val -->
+                                                </div><!-- End .ratings -->
+                                                <span class="ratings-text">( 4 Reviews )</span>
+                                            </div><!-- End .rating-container -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+
+                                    <div class="product product-2">
+                                        <figure class="product-media">
+                                            <a title="21" href="product.html">
+                                                <img title="product-2"
+                                                    src="assets/images/demos/demo-4/products/product-2.jpg"
+                                                    alt="Product image" class="product-image">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a title="21" href="#" class="btn-product-icon btn-wishlist"
+                                                    title="Add to wishlist"></a>
+                                            </div><!-- End .product-action -->
+
+                                            <div class="product-action">
+                                                <a title="21" href="#" class="btn-product btn-cart"
+                                                    title="Add to cart"><span>add to cart</span></a>
+                                                <a title="21" href="popup/quickView.html"
+                                                    class="btn-product btn-quickview" title="Quick view"><span>quick
+                                                        view</span></a>
+                                            </div><!-- End .product-action -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <div class="product-cat">
+                                                <a title="21" href="#">Snacks</a>
+                                            </div><!-- End .product-cat -->
+                                            <h3 class="product-title"><a title="21" href="product.html">Takis Tortillas
+                                                    de Maíz Sabor a Fuego</a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                                $15.00
+                                            </div><!-- End .product-price -->
+                                            <div class="ratings-container">
+                                                <div class="ratings">
+                                                    <div class="ratings-val" style="width: 60%;"></div>
+                                                    <!-- End .ratings-val -->
+                                                </div><!-- End .ratings -->
+                                                <span class="ratings-text">( 6 Reviews )</span>
+                                            </div><!-- End .rating-container -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+
+                                    <div class="product product-2">
+                                        <figure class="product-media">
+                                            <span class="product-label label-circle label-new">New</span>
+                                            <a title="21" href="product.html">
+                                                <img title="product-3_2"
+                                                    src="assets/images/demos/demo-4/products/product-3.jpg"
+                                                    alt="Product image" class="product-image">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a href="#" class="btn-product-icon btn-wishlist"
+                                                    title="Add to wishlist"></a>
+                                            </div><!-- End .product-action -->
+
+                                            <div class="product-action">
+                                                <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add
+                                                        to cart</span></a>
+                                                <a title="21" href="popup/quickView.html"
+                                                    class="btn-product btn-quickview" title="Quick view"><span>quick
+                                                        view</span></a>
+                                            </div><!-- End .product-action -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <div class="product-cat">
+                                                <a title="21" href="#">Bebidas</a>
+                                            </div><!-- End .product-cat -->
+                                            <h3 class="product-title"><a title="21" href="product.html">Coca-Cola
+                                                    Original Refresco Lata 235 ml </a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                                $14.99
+                                            </div><!-- End .product-price -->
+                                            <div class="ratings-container">
+                                                <div class="ratings">
+                                                    <div class="ratings-val" style="width: 80%;"></div>
+                                                    <!-- End .ratings-val -->
+                                                </div><!-- End .ratings -->
+                                                <span class="ratings-text">( 4 Reviews )</span>
+                                            </div><!-- End .rating-container -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+                                </div><!-- End .owl-carousel -->
+                            </div>
+                        </div>
+                                <!--------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+                                <div class="tab-content tab-content-carousel just-action-icons-sm" id="MENOS">
+                                    <div class="tab-pane p-0 fade show active" id="new-all-tab" role="tabpanel"
+                                        aria-labelledby="new-all-link">
+                                        <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow"
+                                            data-toggle="owl" data-owl-options='{
+                "nav": true, 
+                "dots": true,
+                "margin": 20,
+                "loop": false,
+                "responsive": {
+                    "0": {
+                        "items":2
+                    },
+                    "480": {
+                        "items":2
+                    },
+                    "768": {
+                        "items":3
+                    },
+                    "992": {
+                        "items":4
+                    },
+                    "1200": {
+                        "items":5
+                    }
+                }
+            }'>
+                                            <div class="product product-2">
+                                                <figure class="product-media">
+                                                    <span class="product-label label-circle label-new">New</span>
+                                                    <a title="21" href="product.html">
+                                                        <img title="product-3_2"
+                                                            src="assets/images/demos/demo-4/products/product-3.jpg"
+                                                            alt="Product image" class="product-image">
+                                                    </a>
+
+                                                    <div class="product-action-vertical">
+                                                        <a href="#" class="btn-product-icon btn-wishlist"
+                                                            title="Add to wishlist"></a>
+                                                    </div><!-- End .product-action -->
+
+                                                    <div class="product-action">
+                                                        <a href="#" class="btn-product btn-cart"
+                                                            title="Add to cart"><span>add to cart</span></a>
+                                                        <a title="21" href="popup/quickView.html"
+                                                            class="btn-product btn-quickview"
+                                                            title="Quick view"><span>quick view</span></a>
+                                                    </div><!-- End .product-action -->
+                                                </figure><!-- End .product-media -->
+
+                                                <div class="product-body">
+                                                    <div class="product-cat">
+                                                        <a title="21" href="#">Bebidas</a>
+                                                    </div><!-- End .product-cat -->
+                                                    <h3 class="product-title"><a title="21"
+                                                            href="product.html">Coca-Cola Original Refresco Lata 235 ml
+                                                        </a></h3><!-- End .product-title -->
+                                                    <div class="product-price">
+                                                        $14.99
+                                                    </div><!-- End .product-price -->
+                                                    <div class="ratings-container">
+                                                        <div class="ratings">
+                                                            <div class="ratings-val" style="width: 80%;"></div>
+                                                            <!-- End .ratings-val -->
+                                                        </div><!-- End .ratings -->
+                                                        <span class="ratings-text">( 4 Reviews )</span>
+                                                    </div><!-- End .rating-container -->
+                                                </div><!-- End .product-body -->
+                                            </div><!-- End .product -->
+
+                                            <div class="product product-2">
+                                                <figure class="product-media">
+                                                    <a title="21" href="product.html">
+                                                        <img title="product-2"
+                                                            src="assets/images/demos/demo-4/products/product-2.jpg"
+                                                            alt="Product image" class="product-image">
+                                                    </a>
+
+                                                    <div class="product-action-vertical">
+                                                        <a title="21" href="#" class="btn-product-icon btn-wishlist"
+                                                            title="Add to wishlist"></a>
+                                                    </div><!-- End .product-action -->
+
+                                                    <div class="product-action">
+                                                        <a title="21" href="#" class="btn-product btn-cart"
+                                                            title="Add to cart"><span>add to cart</span></a>
+                                                        <a title="21" href="popup/quickView.html"
+                                                            class="btn-product btn-quickview"
+                                                            title="Quick view"><span>quick view</span></a>
+                                                    </div><!-- End .product-action -->
+                                                </figure><!-- End .product-media -->
+
+                                                <div class="product-body">
+                                                    <div class="product-cat">
+                                                        <a title="21" href="#">Snacks</a>
+                                                    </div><!-- End .product-cat -->
+                                                    <h3 class="product-title"><a title="21" href="product.html">Takis
+                                                            Tortillas de Maíz Sabor a Fuego</a></h3>
+                                                    <!-- End .product-title -->
+                                                    <div class="product-price">
+                                                        $15.00
+                                                    </div><!-- End .product-price -->
+                                                    <div class="ratings-container">
+                                                        <div class="ratings">
+                                                            <div class="ratings-val" style="width: 60%;"></div>
+                                                            <!-- End .ratings-val -->
+                                                        </div><!-- End .ratings -->
+                                                        <span class="ratings-text">( 6 Reviews )</span>
+                                                    </div><!-- End .rating-container -->
+                                                </div><!-- End .product-body -->
+                                            </div><!-- End .product -->
+
+                                            <div class="product product-2">
+                                                <figure class="product-media">
+                                                    <span class="product-label label-circle label-top">Top</span>
+                                                    <a title="21" href="product.html">
+                                                        <img title="product-4"
+                                                            src="assets/images/demos/demo-4/products/product-4.jpg"
+                                                            alt="Product image" class="product-image">
+                                                    </a>
+
+                                                    <div class="product-action-vertical">
+                                                        <a title="21" href="#" class="btn-product-icon btn-wishlist"
+                                                            title="Add to wishlist"></a>
+                                                    </div><!-- End .product-action -->
+
+                                                    <div class="product-action">
+                                                        <a title="21" href="#" class="btn-product btn-cart"
+                                                            title="Add to cart"><span>add to cart</span></a>
+                                                        <a title="21" href="popup/quickView.html"
+                                                            class="btn-product btn-quickview"
+                                                            title="Quick view"><span>quick view</span></a>
+                                                    </div><!-- End .product-action -->
+                                                </figure><!-- End .product-media -->
+
+                                                <div class="product-body">
+                                                    <div class="product-cat">
+                                                        <a title="21" href="#">Bebidas</a>
+                                                    </div><!-- End .product-cat -->
+                                                    <h3 class="product-title"><a title="21" href="product.html">Coca
+                                                            Cola Normal De 500 Ml Pet</a></h3>
+                                                    <!-- End .product-title -->
+                                                    <div class="product-price">
+                                                        $16.99
+                                                    </div><!-- End .product-price -->
+                                                    <div class="ratings-container">
+                                                        <div class="ratings">
+                                                            <div class="ratings-val" style="width: 100%;"></div>
+                                                            <!-- End .ratings-val -->
+                                                        </div><!-- End .ratings -->
+                                                        <span class="ratings-text">( 10 Reviews )</span>
+                                                    </div><!-- End .rating-container -->
+                                                </div><!-- End .product-body -->
+                                            </div><!-- End .product -->
+
+                                            <div class="product product-2">
+                                                <figure class="product-media">
+                                                    <span class="product-label label-circle label-top">Top</span>
+                                                    <a title="21" href="product.html">
+                                                        <img title="product-5"
+                                                            src="assets/images/demos/demo-4/products/product-5.jpg"
+                                                            alt="Product image" class="product-image">
+                                                    </a>
+
+                                                    <div class="product-action-vertical">
+                                                        <a href="#" class="btn-product-icon btn-wishlist"
+                                                            title="Add to wishlist"></a>
+                                                    </div><!-- End .product-action -->
+
+                                                    <div class="product-action">
+                                                        <a href="#" class="btn-product btn-cart"
+                                                            title="Add to cart"><span>add to cart</span></a>
+                                                        <a title="21" href="popup/quickView.html"
+                                                            class="btn-product btn-quickview"
+                                                            title="Quick view"><span>quick view</span></a>
+                                                    </div><!-- End .product-action -->
+                                                </figure><!-- End .product-media -->
+
+                                                <div class="product-body">
+                                                    <div class="product-cat">
+                                                        <a href="#">Comida</a>
+                                                    </div><!-- End .product-cat -->
+                                                    <h3 class="product-title"><a title="21"
+                                                            href="product.html">Chilaquiles Rojos con queso</a></h3>
+                                                    <!-- End .product-title -->
+                                                    <div class="product-price">
+                                                        $39.99
+                                                    </div><!-- End .product-price -->
+                                                    <div class="ratings-container">
+                                                        <div class="ratings">
+                                                            <div class="ratings-val" style="width: 60%;"></div>
+                                                            <!-- End .ratings-val -->
+                                                        </div><!-- End .ratings -->
+                                                        <span class="ratings-text">( 5 Reviews )</span>
+                                                    </div><!-- End .rating-container -->
+                                                </div><!-- End .product-body -->
+                                            </div><!-- End .product -->
+
+                                            <div class="product product-2">
+                                                <figure class="product-media">
+                                                    <span class="product-label label-circle label-top">Top</span>
+                                                    <a href="product1.html">
+                                                        <img title="product-6"
+                                                            src="assets/images/demos/demo-4/products/product-6.jpg"
+                                                            alt="Product image" class="product-image">
+                                                    </a>
+
+                                                    <div class="product-action-vertical">
+                                                        <a href="#" class="btn-product-icon btn-wishlist"
+                                                            title="Add to wishlist"></a>
+                                                    </div><!-- End .product-action -->
+
+                                                    <div class="product-action">
+                                                        <a href="#" class="btn-product btn-cart"
+                                                            title="Add to cart"><span>add to cart</span></a>
+                                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                                            title="Quick view"><span>quick view</span></a>
+                                                    </div><!-- End .product-action -->
+                                                </figure><!-- End .product-media -->
+
+                                                <div class="product-body">
+                                                    <div class="product-cat">
+                                                        <a href="#">Comida</a>
+                                                    </div><!-- End .product-cat -->
+                                                    <h3 class="product-title"><a href="product1.html">Chilaquiles Verdes
+                                                            con queso</a></h3><!-- End .product-title -->
+                                                    <div class="product-price">
+                                                        $39.99
+                                                    </div><!-- End .product-price -->
+                                                    <div class="ratings-container">
+                                                        <div class="ratings">
+                                                            <div class="ratings-val" style="width: 100%;"></div>
+                                                            <!-- End .ratings-val -->
+                                                        </div><!-- End .ratings -->
+                                                        <span class="ratings-text">( 4 Reviews )</span>
+                                                    </div><!-- End .rating-container -->
+                                                </div><!-- End .product-body -->
+                                            </div><!-- End .product -->
+
+
+
+
+                                            <div class="product product-2">
+                                                <figure class="product-media">
+                                                    <span class="product-label label-circle label-top">Top</span>
+                                                    <a title="22" href="product.html">
+                                                        <img title="product-1"
+                                                            src="assets/images/demos/demo-4/products/product-1.jpg"
+                                                            alt="Product image" class="product-image">
+                                                    </a>
+
+                                                    <div class="product-action-vertical">
+                                                        <a title="23" href="#" class="btn-product-icon btn-wishlist"
+                                                            title="Add to wishlist"></a>
+                                                    </div><!-- End .product-action -->
+
+                                                    <div class="product-action">
+                                                        <a title="12" href="#" class="btn-product btn-cart"
+                                                            title="Add to cart"><span>add to cart</span></a>
+                                                        <a title="12" href="popup/quickView.html"
+                                                            class="btn-product btn-quickview"
+                                                            title="Quick view"><span>quick view</span></a>
+                                                    </div><!-- End .product-action -->
+                                                </figure><!-- End .product-media -->
+
+                                                <div class="product-body">
+                                                    <div class="product-cat">
+                                                        <a title="12" href="#">Comida</a>
+                                                    </div><!-- End .product-cat -->
+                                                    <h3 class="product-title"><a title="12" href="product5.html">Double
+                                                            Western Bacon Cheeseburger</a></h3>
+                                                    <!-- End .product-title -->
+                                                    <div class="product-price">
+                                                        $130.00
+                                                    </div><!-- End .product-price -->
+                                                    <div class="ratings-container">
+                                                        <div class="ratings">
+                                                            <div class="ratings-val" style="width: 100%;"></div>
+                                                            <!-- End .ratings-val -->
+                                                        </div><!-- End .ratings -->
+                                                        <span class="ratings-text">( 4 Reviews )</span>
+                                                    </div><!-- End .rating-container -->
+                                                </div><!-- End .product-body -->
+                                            </div><!-- End .product -->
+
+                                        </div><!-- End .product -->
+
+                                    </div><!-- End .owl-carousel -->
+                                </div>
+            
+
+                                    <!------------------------------------------------------------------------------------------------------------->
+
+                                    <div class="tab-content tab-content-carousel just-action-icons-sm" id="MAS">
+                                        <div class="tab-pane p-0 fade show active" id="new-all-tab" role="tabpanel"
+                                            aria-labelledby="new-all-link">
+                                            <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow"
+                                                data-toggle="owl" data-owl-options='{
+                "nav": true, 
+                "dots": true,
+                "margin": 20,
+                "loop": false,
+                "responsive": {
+                    "0": {
+                        "items":2
+                    },
+                    "480": {
+                        "items":2
+                    },
+                    "768": {
+                        "items":3
+                    },
+                    "992": {
+                        "items":4
+                    },
+                    "1200": {
+                        "items":5
+                    }
+                }
+            }'>
+
+                                                <div class="product product-2">
+                                                    <figure class="product-media">
+                                                        <span class="product-label label-circle label-top">Top</span>
+                                                        <a title="22" href="product.html">
+                                                            <img title="product-1"
+                                                                src="assets/images/demos/demo-4/products/product-1.jpg"
+                                                                alt="Product image" class="product-image">
+                                                        </a>
+
+                                                        <div class="product-action-vertical">
+                                                            <a title="23" href="#" class="btn-product-icon btn-wishlist"
+                                                                title="Add to wishlist"></a>
+                                                        </div><!-- End .product-action -->
+
+                                                        <div class="product-action">
+                                                            <a title="12" href="#" class="btn-product btn-cart"
+                                                                title="Add to cart"><span>add to cart</span></a>
+                                                            <a title="12" href="popup/quickView.html"
+                                                                class="btn-product btn-quickview"
+                                                                title="Quick view"><span>quick view</span></a>
+                                                        </div><!-- End .product-action -->
+                                                    </figure><!-- End .product-media -->
+
+                                                    <div class="product-body">
+                                                        <div class="product-cat">
+                                                            <a title="12" href="#">Comida</a>
+                                                        </div><!-- End .product-cat -->
+                                                        <h3 class="product-title"><a title="12"
+                                                                href="product5.html">Double Western Bacon
+                                                                Cheeseburger</a></h3><!-- End .product-title -->
+                                                        <div class="product-price">
+                                                            $130.00
+                                                        </div><!-- End .product-price -->
+                                                        <div class="ratings-container">
+                                                            <div class="ratings">
+                                                                <div class="ratings-val" style="width: 100%;"></div>
+                                                                <!-- End .ratings-val -->
+                                                            </div><!-- End .ratings -->
+                                                            <span class="ratings-text">( 4 Reviews )</span>
+                                                        </div><!-- End .rating-container -->
+                                                    </div><!-- End .product-body -->
+                                                </div><!-- End .product -->
+
+                                                <div class="product product-2">
+                                                    <figure class="product-media">
+                                                        <span class="product-label label-circle label-top">Top</span>
+                                                        <a title="21" href="product.html">
+                                                            <img title="product-5"
+                                                                src="assets/images/demos/demo-4/products/product-5.jpg"
+                                                                alt="Product image" class="product-image">
+                                                        </a>
+
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                                title="Add to wishlist"></a>
+                                                        </div><!-- End .product-action -->
+
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-cart"
+                                                                title="Add to cart"><span>add to cart</span></a>
+                                                            <a title="21" href="popup/quickView.html"
+                                                                class="btn-product btn-quickview"
+                                                                title="Quick view"><span>quick view</span></a>
+                                                        </div><!-- End .product-action -->
+                                                    </figure><!-- End .product-media -->
+
+                                                    <div class="product-body">
+                                                        <div class="product-cat">
+                                                            <a href="#">Comida</a>
+                                                        </div><!-- End .product-cat -->
+                                                        <h3 class="product-title"><a title="21"
+                                                                href="product.html">Chilaquiles Rojos con queso</a></h3>
+                                                        <!-- End .product-title -->
+                                                        <div class="product-price">
+                                                            $39.99
+                                                        </div><!-- End .product-price -->
+                                                        <div class="ratings-container">
+                                                            <div class="ratings">
+                                                                <div class="ratings-val" style="width: 60%;"></div>
+                                                                <!-- End .ratings-val -->
+                                                            </div><!-- End .ratings -->
+                                                            <span class="ratings-text">( 5 Reviews )</span>
+                                                        </div><!-- End .rating-container -->
+                                                    </div><!-- End .product-body -->
+                                                </div><!-- End .product -->
+
+                                                <div class="product product-2">
+                                                    <figure class="product-media">
+                                                        <span class="product-label label-circle label-top">Top</span>
+                                                        <a href="product1.html">
+                                                            <img title="product-6"
+                                                                src="assets/images/demos/demo-4/products/product-6.jpg"
+                                                                alt="Product image" class="product-image">
+                                                        </a>
+
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                                title="Add to wishlist"></a>
+                                                        </div><!-- End .product-action -->
+
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-cart"
+                                                                title="Add to cart"><span>add to cart</span></a>
+                                                            <a href="popup/quickView.html"
+                                                                class="btn-product btn-quickview"
+                                                                title="Quick view"><span>quick view</span></a>
+                                                        </div><!-- End .product-action -->
+                                                    </figure><!-- End .product-media -->
+
+                                                    <div class="product-body">
+                                                        <div class="product-cat">
+                                                            <a href="#">Comida</a>
+                                                        </div><!-- End .product-cat -->
+                                                        <h3 class="product-title"><a href="product1.html">Chilaquiles
+                                                                Verdes con queso</a></h3><!-- End .product-title -->
+                                                        <div class="product-price">
+                                                            $39.99
+                                                        </div><!-- End .product-price -->
+                                                        <div class="ratings-container">
+                                                            <div class="ratings">
+                                                                <div class="ratings-val" style="width: 100%;"></div>
+                                                                <!-- End .ratings-val -->
+                                                            </div><!-- End .ratings -->
+                                                            <span class="ratings-text">( 4 Reviews )</span>
+                                                        </div><!-- End .rating-container -->
+                                                    </div><!-- End .product-body -->
+                                                </div><!-- End .product -->
+
+                                                <div class="product product-2">
+                                                    <figure class="product-media">
+                                                        <span class="product-label label-circle label-top">Top</span>
+                                                        <a title="21" href="product.html">
+                                                            <img title="product-4"
+                                                                src="assets/images/demos/demo-4/products/product-4.jpg"
+                                                                alt="Product image" class="product-image">
+                                                        </a>
+
+                                                        <div class="product-action-vertical">
+                                                            <a title="21" href="#" class="btn-product-icon btn-wishlist"
+                                                                title="Add to wishlist"></a>
+                                                        </div><!-- End .product-action -->
+
+                                                        <div class="product-action">
+                                                            <a title="21" href="#" class="btn-product btn-cart"
+                                                                title="Add to cart"><span>add to cart</span></a>
+                                                            <a title="21" href="popup/quickView.html"
+                                                                class="btn-product btn-quickview"
+                                                                title="Quick view"><span>quick view</span></a>
+                                                        </div><!-- End .product-action -->
+                                                    </figure><!-- End .product-media -->
+
+                                                    <div class="product-body">
+                                                        <div class="product-cat">
+                                                            <a title="21" href="#">Bebidas</a>
+                                                        </div><!-- End .product-cat -->
+                                                        <h3 class="product-title"><a title="21" href="product.html">Coca
+                                                                Cola Normal De 500 Ml Pet</a></h3>
+                                                        <!-- End .product-title -->
+                                                        <div class="product-price">
+                                                            $16.99
+                                                        </div><!-- End .product-price -->
+                                                        <div class="ratings-container">
+                                                            <div class="ratings">
+                                                                <div class="ratings-val" style="width: 100%;"></div>
+                                                                <!-- End .ratings-val -->
+                                                            </div><!-- End .ratings -->
+                                                            <span class="ratings-text">( 10 Reviews )</span>
+                                                        </div><!-- End .rating-container -->
+                                                    </div><!-- End .product-body -->
+                                                </div><!-- End .product -->
+
+                                                <div class="product product-2">
+                                                    <figure class="product-media">
+                                                        <a title="21" href="product.html">
+                                                            <img title="product-2"
+                                                                src="assets/images/demos/demo-4/products/product-2.jpg"
+                                                                alt="Product image" class="product-image">
+                                                        </a>
+
+                                                        <div class="product-action-vertical">
+                                                            <a title="21" href="#" class="btn-product-icon btn-wishlist"
+                                                                title="Add to wishlist"></a>
+                                                        </div><!-- End .product-action -->
+
+                                                        <div class="product-action">
+                                                            <a title="21" href="#" class="btn-product btn-cart"
+                                                                title="Add to cart"><span>add to cart</span></a>
+                                                            <a title="21" href="popup/quickView.html"
+                                                                class="btn-product btn-quickview"
+                                                                title="Quick view"><span>quick view</span></a>
+                                                        </div><!-- End .product-action -->
+                                                    </figure><!-- End .product-media -->
+
+                                                    <div class="product-body">
+                                                        <div class="product-cat">
+                                                            <a title="21" href="#">Snacks</a>
+                                                        </div><!-- End .product-cat -->
+                                                        <h3 class="product-title"><a title="21"
+                                                                href="product.html">Takis Tortillas de Maíz Sabor a
+                                                                Fuego</a></h3><!-- End .product-title -->
+                                                        <div class="product-price">
+                                                            $15.00
+                                                        </div><!-- End .product-price -->
+                                                        <div class="ratings-container">
+                                                            <div class="ratings">
+                                                                <div class="ratings-val" style="width: 60%;"></div>
+                                                                <!-- End .ratings-val -->
+                                                            </div><!-- End .ratings -->
+                                                            <span class="ratings-text">( 6 Reviews )</span>
+                                                        </div><!-- End .rating-container -->
+                                                    </div><!-- End .product-body -->
+                                                </div><!-- End .product -->
+
+
+                                                <div class="product product-2">
+                                                    <figure class="product-media">
+                                                        <span class="product-label label-circle label-new">New</span>
+                                                        <a title="21" href="product.html">
+                                                            <img title="product-3_2"
+                                                                src="assets/images/demos/demo-4/products/product-3.jpg"
+                                                                alt="Product image" class="product-image">
+                                                        </a>
+
+                                                        <div class="product-action-vertical">
+                                                            <a href="#" class="btn-product-icon btn-wishlist"
+                                                                title="Add to wishlist"></a>
+                                                        </div><!-- End .product-action -->
+
+                                                        <div class="product-action">
+                                                            <a href="#" class="btn-product btn-cart"
+                                                                title="Add to cart"><span>add to cart</span></a>
+                                                            <a title="21" href="popup/quickView.html"
+                                                                class="btn-product btn-quickview"
+                                                                title="Quick view"><span>quick view</span></a>
+                                                        </div><!-- End .product-action -->
+                                                    </figure><!-- End .product-media -->
+
+                                                    <div class="product-body">
+                                                        <div class="product-cat">
+                                                            <a title="21" href="#">Bebidas</a>
+                                                        </div><!-- End .product-cat -->
+                                                        <h3 class="product-title"><a title="21"
+                                                                href="product.html">Coca-Cola Original Refresco Lata 235
+                                                                ml </a></h3><!-- End .product-title -->
+                                                        <div class="product-price">
+                                                            $14.99
+                                                        </div><!-- End .product-price -->
+                                                        <div class="ratings-container">
+                                                            <div class="ratings">
+                                                                <div class="ratings-val" style="width: 80%;"></div>
+                                                                <!-- End .ratings-val -->
+                                                            </div><!-- End .ratings -->
+                                                            <span class="ratings-text">( 4 Reviews )</span>
+                                                        </div><!-- End .rating-container -->
+                                                    </div><!-- End .product-body -->
+                                                </div><!-- End .product -->
+
+
+
+
+                                            </div><!-- End .owl-carousel -->
+                                        </div>
+                                    </div>
+        
+
+                                        </div><!-- .End .tab-pane -->
+                                        <!--End of first page-->
+                                        <!------------------------------------------------------------------------------------------------------------------>
+                                        <!--End of first page-->
+
+
+
+                                        <div class="container">
+                                            <hr class="mb-0">
+                                        </div><!-- End .container -->
         </main><!-- End .main -->
 
         <footer class="footer">
-        	<div class="footer-middle">
-	            <div class="container">
-	            	<div class="row">
-	            	
-	            		<div class="col-sm-6 col-lg-3">
-	            			<div class="widget">
-	            				<h4 class="widget-title">Mas enlaces</h4><!-- End .widget-title -->
+            <div class="footer-middle">
+                <div class="container">
+                    <div class="row">
 
-	            				<ul class="widget-list">
-	            					<li><a title="about" href="about.html">Acerca</a></li>
-	            					<li><a title="contact" href="contact.html">Contactanos</a></li>
-	            				</ul><!-- End .widget-list -->
-	            			</div><!-- End .widget -->
-	            		</div><!-- End .col-sm-6 col-lg-3 -->
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="widget">
+                                <h4 class="widget-title">Mas enlaces</h4><!-- End .widget-title -->
 
-	            		<div class="col-sm-6 col-lg-3">
-	            			<div class="widget">
-	            				<h4 class="widget-title">Servicio al cliente</h4><!-- End .widget-title -->
+                                <ul class="widget-list">
+                                    <li><a title="about" href="about.html">Acerca</a></li>
+                                    <li><a title="contact" href="contact.html">Contactanos</a></li>
+                                </ul><!-- End .widget-list -->
+                            </div><!-- End .widget -->
+                        </div><!-- End .col-sm-6 col-lg-3 -->
 
-	            				<ul class="widget-list">
-	            					<li><a href="#">Metodo de pago</a></li>
-	            					<li><a href="#">Reenbolsos</a></li>
-	            					<li><a href="#">Terminos y condiciones</a></li>
-	            					<li><a href="#">politica de Privacidad</a></li>
-	            				</ul><!-- End .widget-list -->
-	            			</div><!-- End .widget -->
-	            		</div><!-- End .col-sm-6 col-lg-3 -->
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="widget">
+                                <h4 class="widget-title">Servicio al cliente</h4><!-- End .widget-title -->
 
-	            		<div class="col-sm-6 col-lg-3">
-	            			<div class="widget">
-	            				<h4 class="widget-title">Mi Cuenta</h4><!-- End .widget-title -->
+                                <ul class="widget-list">
+                                    <li><a href="#">Metodo de pago</a></li>
+                                    <li><a href="#">Reenbolsos</a></li>
+                                    <li><a href="#">Terminos y condiciones</a></li>
+                                    <li><a href="#">politica de Privacidad</a></li>
+                                </ul><!-- End .widget-list -->
+                            </div><!-- End .widget -->
+                        </div><!-- End .col-sm-6 col-lg-3 -->
 
-	            				<ul class="widget-list">
-	            					<li><a href="#">Iniciar cuanta</a></li>
-	            					<li><a href="cart.html">Ver carrito</a></li>
-	            					<li><a href="#">Mi lista de deseos</a></li>
-	            					<li><a href="#">Mis Ordenes</a></li>
-	            					<li><a href="#">Ayuda</a></li>
-	            				</ul><!-- End .widget-list -->
-	            			</div><!-- End .widget -->
-	            		</div><!-- End .col-sm-6 col-lg-3 -->
-	            	</div><!-- End .row -->
-	            </div><!-- End .container -->
-	        </div><!-- End .footer-middle -->
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="widget">
+                                <h4 class="widget-title">Mi Cuenta</h4><!-- End .widget-title -->
 
-	        <div class="footer-bottom">
-	        	<div class="container">
-	        		<p class="footer-copyright">Copyright © 2023 Cofee Smart. All Rights Reserved.</p><!-- End .footer-copyright -->
-	        		<figure class="footer-payments">
-	        			<img title="Payment" src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
-	        		</figure><!-- End .footer-payments -->
-	        	</div><!-- End .container -->
-	        </div><!-- End .footer-bottom -->
+                                <ul class="widget-list">
+                                    <li><a href="#">Iniciar cuanta</a></li>
+                                    <li><a href="cart.html">Ver carrito</a></li>
+                                    <li><a href="#">Mi lista de deseos</a></li>
+                                    <li><a href="#">Mis Ordenes</a></li>
+                                    <li><a href="#">Ayuda</a></li>
+                                </ul><!-- End .widget-list -->
+                            </div><!-- End .widget -->
+                        </div><!-- End .col-sm-6 col-lg-3 -->
+                    </div><!-- End .row -->
+                </div><!-- End .container -->
+            </div><!-- End .footer-middle -->
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="footer-copyright">Copyright © 2023 Cofee Smart. All Rights Reserved.</p>
+                    <!-- End .footer-copyright -->
+                    <figure class="footer-payments">
+                        <img title="Payment" src="assets/images/payments.png" alt="Payment methods" width="272"
+                            height="20">
+                    </figure><!-- End .footer-payments -->
+                </div><!-- End .container -->
+            </div><!-- End .footer-bottom -->
         </footer><!-- End .footer -->
     </div><!-- End .page-wrapper -->
     <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
@@ -1624,23 +1584,29 @@
                         <div class="form-tab">
                             <ul class="nav nav-pills nav-fill nav-border-anim" role="tablist">
                                 <li class="nav-item">
-                                    <a title="A" class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="true">Iniciar sesion</a>
+                                    <a title="A" class="nav-link active" id="signin-tab" data-toggle="tab"
+                                        href="#signin" role="tab" aria-controls="signin" aria-selected="true">Iniciar
+                                        sesion</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a title="d" class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Registrarse</a>
+                                    <a title="d" class="nav-link" id="register-tab" data-toggle="tab" href="#register"
+                                        role="tab" aria-controls="register" aria-selected="false">Registrarse</a>
                                 </li>
                             </ul>
                             <div class="tab-content" id="tab-content-5">
-                                <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+                                <div class="tab-pane fade show active" id="signin" role="tabpanel"
+                                    aria-labelledby="signin-tab">
                                     <form action="#">
                                         <div class="form-group">
                                             <label for="singin-email">Nombre de Usuario o email *</label>
-                                            <input type="text" class="form-control" id="singin-email" name="singin-email" required>
+                                            <input type="text" class="form-control" id="singin-email"
+                                                name="singin-email" required>
                                         </div><!-- End .form-group -->
 
                                         <div class="form-group">
                                             <label for="singin-password">Contraseña *</label>
-                                            <input type="password" class="form-control" id="singin-password" name="singin-password" required>
+                                            <input type="password" class="form-control" id="singin-password"
+                                                name="singin-password" required>
                                         </div><!-- End .form-group -->
 
                                         <div class="form-footer">
@@ -1650,8 +1616,10 @@
                                             </button>
 
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="signin-remember">
-                                                <label class="custom-control-label" for="signin-remember">Recuerdame</label>
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="signin-remember">
+                                                <label class="custom-control-label"
+                                                    for="signin-remember">Recuerdame</label>
                                             </div><!-- End .custom-checkbox -->
 
                                             <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
@@ -1679,12 +1647,14 @@
                                     <form action="#">
                                         <div class="form-group">
                                             <label for="register-email">Introduce tu email *</label>
-                                            <input type="email" class="form-control" id="register-email" name="register-email" required>
+                                            <input type="email" class="form-control" id="register-email"
+                                                name="register-email" required>
                                         </div><!-- End .form-group -->
 
                                         <div class="form-group">
                                             <label for="register-password">Contraseña *</label>
-                                            <input type="password" class="form-control" id="register-password" name="register-password" required>
+                                            <input type="password" class="form-control" id="register-password"
+                                                name="register-password" required>
                                         </div><!-- End .form-group -->
 
                                         <div class="form-footer">
@@ -1694,8 +1664,10 @@
                                             </button>
 
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="register-policy" required>
-                                                <label class="custom-control-label" for="register-policy">Estoy de acuerdo <a href="#">Politica de Privacidad</a> *</label>
+                                                <input type="checkbox" class="custom-control-input" id="register-policy"
+                                                    required>
+                                                <label class="custom-control-label" for="register-policy">Estoy de
+                                                    acuerdo <a href="#">Politica de Privacidad</a> *</label>
                                             </div><!-- End .custom-checkbox -->
                                         </div><!-- End .form-footer -->
                                     </form>
@@ -1740,4 +1712,5 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/demos/demo-4.js"></script>
 </body>
+
 </html>
