@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 const baseDeDatos = [
-    /*{
+    {
         id: 1,
         nombre: 'PatataDouble Western Bacon Cheeseburger',
         precio: 130,
@@ -11,19 +11,55 @@ const baseDeDatos = [
         nombre: 'Takis Tortillas de Maíz Sabor a Fuego',
         precio: 15,
         imagen: 'assets/images/demos/demo-4/products/product-2.jpg'
-    },*/
+    },
     {
         id: 3,
         nombre: 'Coca-Cola Original Refresco Lata 235 ml',
         precio: 14.99,
         imagen: 'assets/images/demos/demo-4/products/product-3.jpg'
     },
-    /*{
+    {
         id: 4,
         nombre: 'Coca Cola Normal De 500 Ml Pet',
         precio: 14.99,
         imagen: 'assets/images/demos/demo-4/products/product-4.jpg'
-    }*/
+    },
+    {
+        id: 5,
+        nombre: 'Chilasquiles rojos',
+        precio: 39.99,
+        imagen: 'assets/images/demos/demo-4/products/product-5.jpg'
+    },
+    {
+        id: 6,
+        nombre: 'Chulaquiles verdes',
+        precio: 39.99,
+        imagen: 'assets/images/demos/demo-4/products/product-6.jpg'
+    },
+    {
+        id: 7,
+        nombre: 'Torta de jamon con queso',
+        precio: 29.99,
+        imagen: 'assets/images/demos/demo-4/products/product-7.jpg'
+    },
+    {
+        id: 8,
+        nombre: 'Agua natural Bonafont 1Lt',
+        precio: 15,
+        imagen: 'assets/images/demos/demo-4/products/product-8.jpg'
+    },
+    {
+        id: 9,
+        nombre: 'Papas Sabritas Naturales 90grs',
+        precio: 17,
+        imagen: 'assets/images/demos/demo-4/products/product-9.jpg'
+    },
+    {
+        id: 10,
+        nombre: 'Doritos Nacho 90grs',
+        precio: 17,
+        imagen: 'assets/images/demos/demo-4/products/product-10.jpg'
+    }
 
 ];
 
