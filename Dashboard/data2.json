@@ -1,0 +1,12 @@
+[
+    {
+        "id": "1",
+        "name": "Takis",
+        "desc": "Combina los sabores del pimiento picante y lima en un color azul intenso.",
+        "desc_l": "Los Takis Blue Heat combinan los sabores del pimiento picante y lima en un color azul intenso. Si eres de los amantes del picante, seguro los amar\u00e1s, pues son m\u00e1s picosos que los Takis fuego.\u200b",
+        "precio": "15",
+        "categoria": "Snack",
+        "stock": "13",
+        "img": "url"
+    }
+]
