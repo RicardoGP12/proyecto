@@ -186,7 +186,16 @@ function calcularTotal() {
             return itemBaseDatos.id === parseInt(item);
         });
         // Los sumamos al total
-        return total + miItem[0].precio;
+        //localStorage.setItem(total)
+        total = total + miItem[0].precio;
+
+        localStorage.setItem("aa",total);
+        aa= localStorage.getItem("aa");
+        console.log(aa);
+        return total;
+        
+
+
     }, 0).toFixed(2);
 }
 
