@@ -34,11 +34,18 @@ function iniciarSesion() {
     var verify = !!users.find(element => element.email === user_ && element.contraseña === pass_)
 
     console.log(verify);
-
+    a=element.email;
+    console.log(a);
+    
     if (verify) {
         // window.location = 'verificacion.html';
         alert('¡Correo y contraseña correctos!');
-        window.location.href = "index.html";
+      // window.location = "index.html";
+        localStorage.setItem("Nombre",user_);
+        localStorage.setItem("N",)
+        //a = localStorage.getItem("Nombre");
+        //console.log(a);
+        //document.getElementById('m').innerHTML = element.email;
         
     } else {
         alert('Correo o contraseña incorrecta');
