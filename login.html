@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,9 @@
     <title>Cooffe-Smart - Ingresar</title>
     <meta name="keywords" content="HTML5 Template">
     <meta name="description" content="Página web para ordenar comida de una forma más rápida y cómoda.">
-    <meta name="author" content="Ricardo Guerrero Prieto, María Fernanda Sánchez Lupercio, Eduardo Miguel López Flores, Vanessa García Lara">
-    
+    <meta name="author"
+        content="Ricardo Guerrero Prieto, María Fernanda Sánchez Lupercio, Eduardo Miguel López Flores, Vanessa García Lara">
+
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
@@ -28,12 +30,40 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JHKHEEV80"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-7JHKHEEV80');
+    gtag('config', 'G-7JHKHEEV80');
 </script>
+<script>
+
+    const users = [
+        { email: 'luis', contrasena: '123' },
+        { email: 'chris', contrasena: '456' },
+        { email: 'mario', contrasena: '789' },
+    ];
+
+    function iniciarSesion() {
+        var user_ = document.getElementById('user').value;
+        var pass_ = document.getElementById('pass').value;
+
+        // console.log(user_);
+        // console.log(pass_);
+
+        var verify = !!users.find(element => element.email === user_ && element.contrasena === pass_)
+
+        console.log(verify);
+
+        if (verify) {
+            // window.location = 'verificacion.html';
+            alert('¡Correo y contraseña correctos!');
+        } else {
+            alert('Correo o contraseña incorrecta');
+        }
+    }
+</script>
+
 <body>
     <div class="page-wrapper">
         <header class="header">
@@ -41,607 +71,659 @@
                 <header class="header header-intro-clearance header-4">
                     <div class="header-top">
                         <div class="container">
-        
+
                             <div class="header-right">
-        
+
                                 <ul class="top-menu">
                                     <li>
                                         <a href="#">Links</a>
                                         <ul>
-        
-                                            <li><a href="#signin-modal" data-toggle="modal">Iniciar sesion / Registrarse</a></li>
+
+                                            <li><a href="#signin-modal" data-toggle="modal">Iniciar sesion /
+                                                    Registrarse</a></li>
                                         </ul>
                                     </li>
 
                                 </ul><!-- Fin .top-menu -->
                             </div><!-- Fin .header-right -->
-        
+
                         </div><!-- Fin .contenedor -->
                     </div><!-- Fin .header-top -->
 
-            <div class="header-middle sticky-header">
-                <div class="container">
-                    <div class="header-left">
-                        <button class="mobile-menu-toggler">
-                            <span class="sr-only">Toggle mobile menu</span>
-                            <i class="icon-bars"></i>
-                        </button>
+                    <div class="header-middle sticky-header">
+                        <div class="container">
+                            <div class="header-left">
+                                <button class="mobile-menu-toggler">
+                                    <span class="sr-only">Toggle mobile menu</span>
+                                    <i class="icon-bars"></i>
+                                </button>
 
-                        <a href="index.html" class="logo">
-                            <img src="assets/images/logo.png" alt="Molla Logo" width="105" height="25">
-                        </a>
-
-                        <nav class="main-nav">
-                            <ul class="menu sf-arrows">
-                                <li class="megamenu-container active">
-                                    <a href="index.html" class="sf-with-ul">Home</a>
-
-                                </li> 
-                                <li>
-                                    <a href="category.html" class="sf-with-ul">Menu</a>
-
-                                </li>
-                                <li>
-                                    <a href="product.html" class="sf-with-ul">Productos</a>
-
-                                    
-                                </li>
-                            </ul><!-- Fin .menu -->
-                        </nav><!-- Fin .main-nav -->
-                    </div><!-- Fin .header-left -->
-
-                    <div class="header-right">
-                        <div class="header-search">
-                            <a href="#" class="search-toggle" role="button" title="Search"><i class="icon-search"></i></a>
-                            <form action="#" method="get">
-                                <div class="header-search-wrapper">
-                                    <label for="q" class="sr-only">Buscar</label>
-                                    <input type="search" class="form-control" name="q" id="q" placeholder="Search in..." required>
-                                </div><!--  Terminar .header-search-wrapper -->
-                            </form>
-                        </div><!-- Fin .header-search -->
-
-
-                        <div class="dropdown cart-dropdown">
-                            <div class="dropdown cart-dropdown">
-                                <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
-                                    <div class="icon">
-                                        <i class="icon-shopping-cart"></i>
-                                        <span class="cart-count">2</span>
-                                    </div>
-                                    <p>Carrito</p>
+                                <a href="index.html" class="logo">
+                                    <img src="assets/images/logo.png" alt="Molla Logo" width="105" height="25">
                                 </a>
-    
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <div class="dropdown-cart-products">
-                                        <div class="product">
-                                            <div class="product-cart-details">
-                                                <h4 class="product-title">
-                                                    <a href="product.html">Chilaquiles Verdes con queso</a>
-                                                </h4>
-    
-                                                <span class="cart-product-info">
-                                                    <span class="cart-product-qty">1</span>
-                                                    x $39.99
-                                                </span>
-                                            </div><!-- Fin .productos-cart-details -->
-    
-                                            <figure class="product-image-container">
-                                                <a href="product.html" class="product-image">
-                                                    <img src="assets/images/demos/demo-4/products/product-6.jpg" alt="product">
-                                                </a>
-                                            </figure>
-                                            <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
-                                        </div><!-- Fin.product -->
-    
-                                        <div class="product">
-                                            <div class="product-cart-details">
-                                                <h4 class="product-title">
-                                                    <a href="product.html">Coca-Cola Original Refresco Lata 235 ml</a>
-                                                </h4>
-    
-                                                <span class="cart-product-info">
-                                                    <span class="cart-product-qty">1</span>
-                                                    x $14.99
-                                                </span>
-                                            </div><!-- Fin .product-cart-details -->
-    
-                                            <figure class="product-image-container">
-                                                <a href="product.html" class="product-image">
-                                                    <img src="assets/images/demos/demo-4/products/product-3.jpg" alt="product">
-                                                </a>
-                                            </figure>
-                                            <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
-                                        </div><!-- Fin .product -->
-                                    </div><!-- Fin .cart-product -->
-    
-                                    <div class="dropdown-cart-total">
-                                        <span>Total</span>
-    
-                                        <span class="cart-total-price">54.99</span>
-                                    </div><!-- Fin.dropdown-cart-total -->
-                                    <!--- Este es un espacio para separar el cofigo nnnnn-->
-                                    <div class="dropdown-cart-action">
-                                        <a href="cart.html" class="btn btn-primary">Ver Carrito</a>
-                                        <a href="checkout.html" class="btn btn-outline-primary-2"><span>Comprar</span><i class="icon-long-arrow-right"></i></a>
-                                    </div><!-- Fin.dropdown-cart-total -->
-                                </div><!-- Fin .dropdown-menu -->
-                            
-                        </div><!-- Fin .cart-dropdown -->
-                    </div><!-- Fin .header-right -->
-                </div><!-- Fin .container -->
-            </div><!-- Fin .header-middle -->
-        </header><!-- Fin .header -->
 
-        <main class="main">
-            <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
-                <div class="container">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Paginas</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Ingresar</li>
-                    </ol>
-                </div>
-            </nav>
+                                <nav class="main-nav">
+                                    <ul class="menu sf-arrows">
+                                        <li class="megamenu-container active">
+                                            <a href="index.html" class="sf-with-ul">Home</a>
 
-            <div class="login-page bg-image pt-8 pb-8 pt-md-12 pb-md-12 pt-lg-17 pb-lg-17" style="background-image: url('assets/images/backgrounds/cafeteria.jpg')">
-            	<div class="container">
-            		<div class="form-box">
-            			<div class="form-tab">
-	            			<ul class="nav nav-pills nav-fill" role="tablist">
-							    <li class="nav-item">
-							        <a class="nav-link" id="signin-tab-2" data-toggle="tab" href="#signin-2" role="tab" aria-controls="signin-2" aria-selected="false">Iniciar seccion</a>
-							    </li>
-							    <li class="nav-item">
-							        <a class="nav-link active" id="register-tab-2" data-toggle="tab" href="#register-2" role="tab" aria-controls="register-2" aria-selected="true">Registarse</a>
-							    </li>
-							</ul>
-							<div class="tab-content">
-							    <div class="tab-pane fade" id="signin-2" role="tabpanel" aria-labelledby="signin-tab-2">
-							    	<form action="#">
-							    		<div class="form-group">
-							    			<label for="singin-email-2">Nombre o dirrecion de correo *</label>
-							    			<input type="text" class="form-control" id="singin-email-2" name="singin-email" required>
-							    		</div><!-- Fin .form-group -->
+                                        </li>
+                                        <li>
+                                            <a href="category.html" class="sf-with-ul">Menu</a>
 
-							    		<div class="form-group">
-							    			<label for="singin-password-2">Contraseña *</label>
-							    			<input type="password" class="form-control" id="singin-password-2" name="singin-password" required>
-							    		</div><!-- Fin.form-group -->
+                                        </li>
+                                        <li>
+                                            <a href="product.html" class="sf-with-ul">Productos</a>
 
-							    		<div class="form-footer">
-							    			<button type="submit" class="btn btn-outline-primary-2">
-			                					<span>INICIAR</span>
-			            						<i class="icon-long-arrow-right"></i>
-			                				</button>
 
-			                				<div class="custom-control custom-checkbox">
-												<input type="checkbox" class="custom-control-input" id="signin-remember-2">
-												<label class="custom-control-label" for="signin-remember-2">Recordarme</label>
-											</div><!-- Fin .custom-checkbox -->
+                                        </li>
+                                    </ul><!-- Fin .menu -->
+                                </nav><!-- Fin .main-nav -->
+                            </div><!-- Fin .header-left -->
 
-											<a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
-							    		</div><!-- Fin.form-footer -->
-							    	</form>
-							    	<div class="form-choice">
-								    	<p class="text-center">o iniciar seccion con</p>
-								    	<div class="row">
-								    		<div class="col-sm-6">
-								    			<a href="#" class="btn btn-login btn-g">
-								    				<i class="icon-google"></i>
-								    				Abrir con Google
-								    			</a>
-								    		</div><!-- Fin .col-6 -->
-								    		<div class="col-sm-6">
-								    			<a href="#" class="btn btn-login btn-f">
-								    				<i class="icon-facebook-f"></i>
-								    				Abrir con Facebook
-								    			</a>
-								    		</div><!-- fin .col-6 -->
-								    	</div><!-- fin .row -->
-							    	</div><!-- fin .form-choice -->
-							    </div><!-- fin .tab-pane -->
-							    <div class="tab-pane fade show active" id="register-2" role="tabpanel" aria-labelledby="register-tab-2">
-							    	<form action="#">
-							    		<div class="form-group">
-							    			<label for="register-email-2">Su dirreccion de correo electronico *</label>
-							    			<input type="email" class="form-control" id="register-email-2" name="register-email" required>
-							    		</div><!-- fin .form-group -->
-
-							    		<div class="form-group">
-							    			<label for="register-password-2">Contraseña *</label>
-							    			<input type="password" class="form-control" id="register-password-2" name="register-password" required>
-							    		</div><!-- fin .form-group -->
-
-							    		<div class="form-footer">
-							    			<button type="submit" class="btn btn-outline-primary-2">
-			                					<span>INICIAR SECCION </span>
-			            						<i class="icon-long-arrow-right"></i>
-			                				</button>
-
-			                				<div class="custom-control custom-checkbox">
-												<input type="checkbox" class="custom-control-input" id="register-policy-2" required>
-												<label class="custom-control-label" for="register-policy-2">Estoy de acuerdo con la <a href="#">política de publicidad</a> *</label>
-											</div><!-- fin .custom-checkbox -->
-							    		</div><!-- fin .form-footer -->
-							    	</form>
-							    	<div class="form-choice">
-								    	<p class="text-center">o iniciar seccion con</p>
-								    	<div class="row">
-								    		<div class="col-sm-6">
-								    			<a href="#" class="btn btn-login btn-g">
-								    				<i class="icon-google"></i>
-								    				Abrir con Google
-								    			</a>
-								    		</div><!-- End .col-6 -->
-								    		<div class="col-sm-6">
-								    			<a href="#" class="btn btn-login  btn-f">
-								    				<i class="icon-facebook-f"></i>
-								    				Abrir con Facebook
-								    			</a>
-								    		</div><!-- End .col-6 -->
-								    	</div><!-- End .row -->
-							    	</div><!-- End .form-choice -->
-							    </div><!-- .End .tab-pane -->
-							</div><!-- End .tab-content -->
-						</div><!-- End .form-tab -->
-            		</div><!-- End .form-box -->
-            	</div><!-- End .container -->
-            </div><!-- End .login-page section-bg -->
-        </main><!-- End .main -->
-
-        <footer class="footer">
-        	<div class="footer-middle">
-	            <div class="container">
-	            	<div class="row">
-	            	
-	            		<div class="col-sm-6 col-lg-3">
-	            			<div class="widget">
-	            				<h4 class="widget-title">Mas enlaces</h4><!-- End .widget-title -->
-
-	            				<ul class="widget-list">
-	            					<li><a href="about.html">Acerca</a></li>
-	            					<li><a href="contact.html">Contactanos</a></li>
-	            				</ul><!-- fin .widget-list -->
-	            			</div><!-- fin .widget -->
-	            		</div><!-- fin .col-sm-6 col-lg-3 -->
-
-	            		<div class="col-sm-6 col-lg-3">
-	            			<div class="widget">
-	            				<h4 class="widget-title">Servicio al cliente</h4><!-- End .widget-title -->
-
-	            				<ul class="widget-list">
-	            					<li><a href="#">Metodo de pago</a></li>
-	            					<li><a href="#">Reenbolsos</a></li>
-	            					<li><a href="#">Terminos y condiciones</a></li>
-	            					<li><a href="#">politica de Privacidad</a></li>
-	            				</ul><!-- finn.widget-list -->
-	            			</div><!-- fin .widget -->
-	            		</div><!-- fin.col-sm-6 col-lg-3 -->
-
-	            		<div class="col-sm-6 col-lg-3">
-	            			<div class="widget">
-	            				<h4 class="widget-title">Mi Cuenta</h4><!-- fin .widget-title -->
-
-	            				<ul class="widget-list">
-	            					<li><a href="#">Iniciar cuanta</a></li>
-	            					<li><a href="cart.html">Ver carrito</a></li>
-	            					<li><a href="#">Mi lista de deseos</a></li>
-	            					<li><a href="#">Mis Ordenes</a></li>
-	            					<li><a href="#">Ayuda</a></li>
-	            				</ul><!-- fin .widget-list -->
-	            			</div><!-- fin .widget -->
-	            		</div><!-- fin .col-sm-6 col-lg-3 -->
-	            	</div><!-- fin .row -->
-	            </div><!-- fin .container -->
-	        </div><!-- fin .footer-middle -->
-
-	        <div class="footer-bottom">
-	        	<div class="container">
-	        		<p class="footer-copyright">Copyright © 2023 Cofee Smart. All Rights Reserved.</p><!-- End .footer-copyright -->
-	        		<figure class="footer-payments">
-	        			<img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
-	        		</figure><!-- End .footer-payments -->
-	        	</div><!-- End .container -->
-	        </div><!-- End .footer-bottom -->
-        </footer><!-- End .footer -->
-    </div><!-- End .page-wrapper -->
-    <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
-
-    <!-- Menú móvil -->
-    <div class="mobile-menu-overlay"></div><!-- Fin .mobil-menu-overlay -->
-
-    <div class="mobile-menu-container">
-        <div class="mobile-menu-wrapper">
-            <span class="mobile-menu-close"><i class="icon-close"></i></span>
-
-            <form action="#" method="get" class="mobile-search">
-                <label for="mobile-search" class="sr-only">Buscar</label>
-                <input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="Search in..." required>
-                <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
-            </form>
-            
-            <nav class="mobile-nav">
-                <ul class="mobile-menu">
-                    <li class="active">
-                        <a href="index.html">Home</a>
-
-                        <ul>
-                            <li><a href="index-1.html">01 - furniture store</a></li>
-                            <li><a href="index-2.html">02 - furniture store</a></li>
-                            <li><a href="index-3.html">03 - electronic store</a></li>
-                            <li><a href="index-4.html">04 - electronic store</a></li>
-                            <li><a href="index-5.html">05 - fashion store</a></li>
-                            <li><a href="index-6.html">06 - fashion store</a></li>
-                            <li><a href="index-7.html">07 - fashion store</a></li>
-                            <li><a href="index-8.html">08 - fashion store</a></li>
-                            <li><a href="index-9.html">09 - fashion store</a></li>
-                            <li><a href="index-10.html">10 - shoes store</a></li>
-                            <li><a href="index-11.html">11 - furniture simple store</a></li>
-                            <li><a href="index-12.html">12 - fashion simple store</a></li>
-                            <li><a href="index-13.html">13 - market</a></li>
-                            <li><a href="index-14.html">14 - market fullwidth</a></li>
-                            <li><a href="index-15.html">15 - lookbook 1</a></li>
-                            <li><a href="index-16.html">16 - lookbook 2</a></li>
-                            <li><a href="index-17.html">17 - fashion store</a></li>
-                            <li><a href="index-18.html">18 - fashion store (with sidebar)</a></li>
-                            <li><a href="index-19.html">19 - games store</a></li>
-                            <li><a href="index-20.html">20 - book store</a></li>
-                            <li><a href="index-21.html">21 - sport store</a></li>
-                            <li><a href="index-22.html">22 - tools store</a></li>
-                            <li><a href="index-23.html">23 - fashion left navigation store</a></li>
-                            <li><a href="index-24.html">24 - extreme sport store</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="category.html">Shop</a>
-                        <ul>
-                            <li><a href="category-list.html">Shop List</a></li>
-                            <li><a href="category-2cols.html">Shop Grid 2 Columns</a></li>
-                            <li><a href="category.html">Shop Grid 3 Columns</a></li>
-                            <li><a href="category-4cols.html">Shop Grid 4 Columns</a></li>
-                            <li><a href="category-boxed.html"><span>Shop Boxed No Sidebar<span class="tip tip-hot">Hot</span></span></a></li>
-                            <li><a href="category-fullwidth.html">Shop Fullwidth No Sidebar</a></li>
-                            <li><a href="product-category-boxed.html">Product Category Boxed</a></li>
-                            <li><a href="product-category-fullwidth.html"><span>Product Category Fullwidth<span class="tip tip-new">New</span></span></a></li>
-                            <li><a href="cart.html">Cart</a></li>
-                            <li><a href="checkout.html">Checkout</a></li>
-                            <li><a href="wishlist.html">Wishlist</a></li>
-                            <li><a href="#">Lookbook</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="product.html" class="sf-with-ul">Product</a>
-                        <ul>
-                            <li><a href="product.html">Default</a></li>
-                            <li><a href="product-centered.html">Centered</a></li>
-                            <li><a href="product-extended.html"><span>Extended Info<span class="tip tip-new">New</span></span></a></li>
-                            <li><a href="product-gallery.html">Gallery</a></li>
-                            <li><a href="product-sticky.html">Sticky Info</a></li>
-                            <li><a href="product-sidebar.html">Boxed With Sidebar</a></li>
-                            <li><a href="product-fullwidth.html">Full Width</a></li>
-                            <li><a href="product-masonry.html">Masonry Sticky Info</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Pages</a>
-                        <ul>
-                            <li>
-                                <a href="about.html">About</a>
-
-                                <ul>
-                                    <li><a href="about.html">About 01</a></li>
-                                    <li><a href="about-2.html">About 02</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="contact.html">Contact</a>
-
-                                <ul>
-                                    <li><a href="contact.html">Contact 01</a></li>
-                                    <li><a href="contact-2.html">Contact 02</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="faq.html">FAQs</a></li>
-                            <li><a href="404.html">Error 404</a></li>
-                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
-
-                        <ul>
-                            <li><a href="blog.html">Classic</a></li>
-                            <li><a href="blog-listing.html">Listing</a></li>
-                            <li>
-                                <a href="#">Grid</a>
-                                <ul>
-                                    <li><a href="blog-grid-2cols.html">Grid 2 columns</a></li>
-                                    <li><a href="blog-grid-3cols.html">Grid 3 columns</a></li>
-                                    <li><a href="blog-grid-4cols.html">Grid 4 columns</a></li>
-                                    <li><a href="blog-grid-sidebar.html">Grid sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Masonry</a>
-                                <ul>
-                                    <li><a href="blog-masonry-2cols.html">Masonry 2 columns</a></li>
-                                    <li><a href="blog-masonry-3cols.html">Masonry 3 columns</a></li>
-                                    <li><a href="blog-masonry-4cols.html">Masonry 4 columns</a></li>
-                                    <li><a href="blog-masonry-sidebar.html">Masonry sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Mask</a>
-                                <ul>
-                                    <li><a href="blog-mask-grid.html">Blog mask grid</a></li>
-                                    <li><a href="blog-mask-masonry.html">Blog mask masonry</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Publicacion Unica</a>
-                                <ul>
-                                    <li><a href="single.html">Predeterminado con barra lateral</a></li>
-                                    <li><a href="single-fullwidth.html">Ancho completo sin barra</a></li>
-                                    <li><a href="single-fullwidth-sidebar.html">Ancho completo con barra</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="elements-list.html">Elementos</a>
-                        <ul>
-                            <li><a href="elements-products.html">Productos</a></li>
-                            <li><a href="elements-typography.html">Typography</a></li>
-                            <li><a href="elements-titles.html">Titles</a></li>
-                            <li><a href="elements-banners.html">Banners</a></li>
-                            <li><a href="elements-product-category.html">Product Category</a></li>
-                            <li><a href="elements-video-banners.html">Video Banners</a></li>
-                            <li><a href="elements-buttons.html">Buttons</a></li>
-                            <li><a href="elements-accordions.html">Accordions</a></li>
-                            <li><a href="elements-tabs.html">Tabs</a></li>
-                            <li><a href="elements-testimonials.html">Testimonials</a></li>
-                            <li><a href="elements-blog-posts.html">Blog Posts</a></li>
-                            <li><a href="elements-portfolio.html">Portfolio</a></li>
-                            <li><a href="elements-cta.html">Call to Action</a></li>
-                            <li><a href="elements-icon-boxes.html">Icon Boxes</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav><!-- End .mobile-nav -->
-
-            <div class="social-icons">
-                <a href="#" class="social-icon" target="_blank" title="Facebook"><i class="icon-facebook-f"></i></a>
-                <a href="#" class="social-icon" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
-                <a href="#" class="social-icon" target="_blank" title="Instagram"><i class="icon-instagram"></i></a>
-                <a href="#" class="social-icon" target="_blank" title="Youtube"><i class="icon-youtube"></i></a>
-            </div><!-- fin .social-icons -->
-        </div><!-- fin .mobile-menu-wrapper -->
-    </div><!-- fin .mobile-menu-container -->
-
-    <!-- Ingresar/ Register Modal  En esta parte vas a ingresar tus datos--> 
-    <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="icon-close"></i></span>
-                    </button>
-
-                    <div class="form-box">
-                        <div class="form-tab">
-                            <ul class="nav nav-pills nav-fill" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="true">Iniciar seccion</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Registrar</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="tab-content-5">
-                                <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
-                                    <form action="#">
-                                        <div class="form-group">
-                                            <label for="singin-email">Nombre o direccion de correo *</label>
-                                            <input type="text" class="form-control" id="singin-email" name="singin-email" required>
-                                        </div><!-- End .form-group -->
-
-                                        <div class="form-group">
-                                            <label for="singin-password">Contraseña *</label>
-                                            <input type="password" class="form-control" id="singin-password" name="singin-password" required>
-                                        </div><!-- End .form-group -->
-
-                                        <div class="form-footer">
-                                            <button type="submit" class="btn btn-outline-primary-2">
-                                                <span>ACCEDER</span>
-                                                <i class="icon-long-arrow-right"></i>
-                                            </button>
-
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="signin-remember">
-                                                <label class="custom-control-label" for="signin-remember">Recordarme</label>
-                                            </div><!-- End .custom-checkbox -->
-
-                                            <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
-                                        </div><!-- End .form-footer -->
+                            <div class="header-right">
+                                <div class="header-search">
+                                    <a href="#" class="search-toggle" role="button" title="Search"><i
+                                            class="icon-search"></i></a>
+                                    <form action="#" method="get">
+                                        <div class="header-search-wrapper">
+                                            <label for="q" class="sr-only">Buscar</label>
+                                            <input type="search" class="form-control" name="q" id="q"
+                                                placeholder="Search in..." required>
+                                        </div><!--  Terminar .header-search-wrapper -->
                                     </form>
-                                    <div class="form-choice">
-                                        <p class="text-center">o inicia seccion con</p>
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <a href="#" class="btn btn-login btn-g">
-                                                    <i class="icon-google"></i>
-                                                    Abrir con Google
-                                                </a>
-                                            </div><!-- End .col-6 -->
-                                            <div class="col-sm-6">
-                                                <a href="#" class="btn btn-login btn-f">
-                                                    <i class="icon-facebook-f"></i>
-                                                    Abrir con Facebook
-                                                </a>
-                                            </div><!-- End .col-6 -->
-                                        </div><!-- End .row -->
-                                    </div><!-- End .form-choice -->
-                                </div><!-- .End .tab-pane -->
-                                <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
-                                    <form action="#">
-                                        <div class="form-group">
-                                            <label for="register-email">Su dirreccion de correo electronico*</label>
-                                            <input type="email" class="form-control" id="register-email" name="register-email" required>
-                                        </div><!-- End .form-group -->
+                                </div><!-- Fin .header-search -->
 
-                                        <div class="form-group">
-                                            <label for="register-password">Contraseña *</label>
-                                            <input type="password" class="form-control" id="register-password" name="register-password" required>
-                                        </div><!-- End .form-group -->
 
-                                        <div class="form-footer">
-                                            <button type="submit" class="btn btn-outline-primary-2">
-                                                <span>REGISTRARSE</span>
-                                                <i class="icon-long-arrow-right"></i>
-                                            </button>
+                                <div class="dropdown cart-dropdown">
+                                    <div class="dropdown cart-dropdown">
+                                        <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false" data-display="static">
+                                            <div class="icon">
+                                                <i class="icon-shopping-cart"></i>
+                                                <span class="cart-count">2</span>
+                                            </div>
+                                            <p>Carrito</p>
+                                        </a>
 
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="register-policy" required>
-                                                <label class="custom-control-label" for="register-policy">Estoy de acuerdo con la <a href="#">política de publicidad</a> *</label>
-                                            </div><!-- End .custom-checkbox -->
-                                        </div><!-- End .form-footer -->
-                                    </form>
-                                    <div class="form-choice">
-                                        <p class="text-center">o inicia seccion con</p>
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <a href="#" class="btn btn-login btn-g">
-                                                    <i class="icon-google"></i>
-                                                    Abrir con Google
-                                                </a>
-                                            </div><!-- End .col-6 -->
-                                            <div class="col-sm-6">
-                                                <a href="#" class="btn btn-login  btn-f">
-                                                    <i class="icon-facebook-f"></i>
-                                                    Abrir con Facebook
-                                                </a>
-                                            </div><!-- End .col-6 -->
-                                        </div><!-- End .row -->
-                                    </div><!-- End .form-choice -->
-                                </div><!-- .End .tab-pane -->
-                            </div><!-- End .tab-content -->
-                        </div><!-- End .form-tab -->
-                    </div><!-- End .form-box -->
-                </div><!-- End .modal-body -->
-            </div><!-- End .modal-content -->
-        </div><!-- End .modal-dialog -->
-    </div><!-- End .modal -->
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <div class="dropdown-cart-products">
+                                                <div class="product">
+                                                    <div class="product-cart-details">
+                                                        <h4 class="product-title">
+                                                            <a href="product.html">Chilaquiles Verdes con queso</a>
+                                                        </h4>
 
-    <!-- Plugins JS File -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.hoverIntent.min.js"></script>
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/superfish.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+                                                        <span class="cart-product-info">
+                                                            <span class="cart-product-qty">1</span>
+                                                            x $39.99
+                                                        </span>
+                                                    </div><!-- Fin .productos-cart-details -->
+
+                                                    <figure class="product-image-container">
+                                                        <a href="product.html" class="product-image">
+                                                            <img src="assets/images/demos/demo-4/products/product-6.jpg"
+                                                                alt="product">
+                                                        </a>
+                                                    </figure>
+                                                    <a href="#" class="btn-remove" title="Remove Product"><i
+                                                            class="icon-close"></i></a>
+                                                </div><!-- Fin.product -->
+
+                                                <div class="product">
+                                                    <div class="product-cart-details">
+                                                        <h4 class="product-title">
+                                                            <a href="product.html">Coca-Cola Original Refresco Lata 235
+                                                                ml</a>
+                                                        </h4>
+
+                                                        <span class="cart-product-info">
+                                                            <span class="cart-product-qty">1</span>
+                                                            x $14.99
+                                                        </span>
+                                                    </div><!-- Fin .product-cart-details -->
+
+                                                    <figure class="product-image-container">
+                                                        <a href="product.html" class="product-image">
+                                                            <img src="assets/images/demos/demo-4/products/product-3.jpg"
+                                                                alt="product">
+                                                        </a>
+                                                    </figure>
+                                                    <a href="#" class="btn-remove" title="Remove Product"><i
+                                                            class="icon-close"></i></a>
+                                                </div><!-- Fin .product -->
+                                            </div><!-- Fin .cart-product -->
+
+                                            <div class="dropdown-cart-total">
+                                                <span>Total</span>
+
+                                                <span class="cart-total-price">54.99</span>
+                                            </div><!-- Fin.dropdown-cart-total -->
+                                            <!--- Este es un espacio para separar el cofigo nnnnn-->
+                                            <div class="dropdown-cart-action">
+                                                <a href="cart.html" class="btn btn-primary">Ver Carrito</a>
+                                                <a href="checkout.html"
+                                                    class="btn btn-outline-primary-2"><span>Comprar</span><i
+                                                        class="icon-long-arrow-right"></i></a>
+                                            </div><!-- Fin.dropdown-cart-total -->
+                                        </div><!-- Fin .dropdown-menu -->
+
+                                    </div><!-- Fin .cart-dropdown -->
+                                </div><!-- Fin .header-right -->
+                            </div><!-- Fin .container -->
+                        </div><!-- Fin .header-middle -->
+                </header><!-- Fin .header -->
+
+                <main class="main">
+                    <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
+                        <div class="container">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Paginas</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Ingresar</li>
+                            </ol>
+                        </div>
+                    </nav>
+
+                    <div class="login-page bg-image pt-8 pb-8 pt-md-12 pb-md-12 pt-lg-17 pb-lg-17"
+                        style="background-image: url('assets/images/backgrounds/cafeteria.jpg')">
+                        <div class="container">
+                            <div class="form-box">
+                                <div class="form-tab">
+                                    <ul class="nav nav-pills nav-fill" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="signin-tab-2" data-toggle="tab" href="#signin-2"
+                                                role="tab" aria-controls="signin-2" aria-selected="false">Iniciar
+                                                seccion</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="register-tab-2" data-toggle="tab"
+                                                href="#register-2" role="tab" aria-controls="register-2"
+                                                aria-selected="true">Registarse</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade" id="signin-2" role="tabpanel"
+                                            aria-labelledby="signin-tab-2">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <label for="singin-email-2">Nombre o dirrecion de correo *</label>
+                                                    <input type="text" class="form-control" id="singin-email-2"
+                                                        name="singin-email" required>
+                                                </div><!-- Fin .form-group -->
+
+                                                <div class="form-group">
+                                                    <label for="singin-password-2">Contraseña *</label>
+                                                    <input type="password" class="form-control" id="singin-password-2"
+                                                        name="singin-password" required>
+                                                </div><!-- Fin.form-group -->
+
+                                                <div class="form-footer">
+                                                    <button type="submit" class="btn btn-outline-primary-2">
+                                                        <span>INICIAR</span>
+                                                        <i class="icon-long-arrow-right"></i>
+                                                    </button>
+
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="signin-remember-2">
+                                                        <label class="custom-control-label"
+                                                            for="signin-remember-2">Recordarme</label>
+                                                    </div><!-- Fin .custom-checkbox -->
+
+                                                    <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                                                </div><!-- Fin.form-footer -->
+                                            </form>
+                                            <div class="form-choice">
+                                                <p class="text-center">o iniciar seccion con</p>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <a href="#" class="btn btn-login btn-g">
+                                                            <i class="icon-google"></i>
+                                                            Abrir con Google
+                                                        </a>
+                                                    </div><!-- Fin .col-6 -->
+                                                    <div class="col-sm-6">
+                                                        <a href="#" class="btn btn-login btn-f">
+                                                            <i class="icon-facebook-f"></i>
+                                                            Abrir con Facebook
+                                                        </a>
+                                                    </div><!-- fin .col-6 -->
+                                                </div><!-- fin .row -->
+                                            </div><!-- fin .form-choice -->
+                                        </div><!-- fin .tab-pane -->
+                                        <div class="tab-pane fade show active" id="register-2" role="tabpanel"
+                                            aria-labelledby="register-tab-2">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <label for="register-email-2">Su dirreccion de correo electronico
+                                                        *</label>
+                                                    <input type="email" class="form-control" id="register-email-2"
+                                                        name="register-email" required>
+                                                </div><!-- fin .form-group -->
+
+                                                <div class="form-group">
+                                                    <label for="register-password-2">Contraseña *</label>
+                                                    <input type="password" class="form-control" id="register-password-2"
+                                                        name="register-password" required>
+                                                </div><!-- fin .form-group -->
+
+                                                <div class="form-footer">
+                                                    <button type="submit" class="btn btn-outline-primary-2">
+                                                        <span>INICIAR SECCION </span>
+                                                        <i class="icon-long-arrow-right"></i>
+                                                    </button>
+
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="register-policy-2" required>
+                                                        <label class="custom-control-label"
+                                                            for="register-policy-2">Estoy de acuerdo con la <a
+                                                                href="#">política de publicidad</a> *</label>
+                                                    </div><!-- fin .custom-checkbox -->
+                                                </div><!-- fin .form-footer -->
+                                            </form>
+                                            <div class="form-choice">
+                                                <p class="text-center">o iniciar seccion con</p>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <a href="#" class="btn btn-login btn-g">
+                                                            <i class="icon-google"></i>
+                                                            Abrir con Google
+                                                        </a>
+                                                    </div><!-- End .col-6 -->
+                                                    <div class="col-sm-6">
+                                                        <a href="#" class="btn btn-login  btn-f">
+                                                            <i class="icon-facebook-f"></i>
+                                                            Abrir con Facebook
+                                                        </a>
+                                                    </div><!-- End .col-6 -->
+                                                </div><!-- End .row -->
+                                            </div><!-- End .form-choice -->
+                                        </div><!-- .End .tab-pane -->
+                                    </div><!-- End .tab-content -->
+                                </div><!-- End .form-tab -->
+                            </div><!-- End .form-box -->
+                        </div><!-- End .container -->
+                    </div><!-- End .login-page section-bg -->
+                </main><!-- End .main -->
+
+                <footer class="footer">
+                    <div class="footer-middle">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="widget">
+                                        <h4 class="widget-title">Mas enlaces</h4><!-- End .widget-title -->
+
+                                        <ul class="widget-list">
+                                            <li><a href="about.html">Acerca</a></li>
+                                            <li><a href="contact.html">Contactanos</a></li>
+                                        </ul><!-- fin .widget-list -->
+                                    </div><!-- fin .widget -->
+                                </div><!-- fin .col-sm-6 col-lg-3 -->
+
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="widget">
+                                        <h4 class="widget-title">Servicio al cliente</h4><!-- End .widget-title -->
+
+                                        <ul class="widget-list">
+                                            <li><a href="#">Metodo de pago</a></li>
+                                            <li><a href="#">Reenbolsos</a></li>
+                                            <li><a href="#">Terminos y condiciones</a></li>
+                                            <li><a href="#">politica de Privacidad</a></li>
+                                        </ul><!-- finn.widget-list -->
+                                    </div><!-- fin .widget -->
+                                </div><!-- fin.col-sm-6 col-lg-3 -->
+
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="widget">
+                                        <h4 class="widget-title">Mi Cuenta</h4><!-- fin .widget-title -->
+
+                                        <ul class="widget-list">
+                                            <li><a href="#">Iniciar cuanta</a></li>
+                                            <li><a href="cart.html">Ver carrito</a></li>
+                                            <li><a href="#">Mi lista de deseos</a></li>
+                                            <li><a href="#">Mis Ordenes</a></li>
+                                            <li><a href="#">Ayuda</a></li>
+                                        </ul><!-- fin .widget-list -->
+                                    </div><!-- fin .widget -->
+                                </div><!-- fin .col-sm-6 col-lg-3 -->
+                            </div><!-- fin .row -->
+                        </div><!-- fin .container -->
+                    </div><!-- fin .footer-middle -->
+
+                    <div class="footer-bottom">
+                        <div class="container">
+                            <p class="footer-copyright">Copyright © 2023 Cofee Smart. All Rights Reserved.</p>
+                            <!-- End .footer-copyright -->
+                            <figure class="footer-payments">
+                                <img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
+                            </figure><!-- End .footer-payments -->
+                        </div><!-- End .container -->
+                    </div><!-- End .footer-bottom -->
+                </footer><!-- End .footer -->
+            </div><!-- End .page-wrapper -->
+            <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
+
+            <!-- Menú móvil -->
+            <div class="mobile-menu-overlay"></div><!-- Fin .mobil-menu-overlay -->
+
+            <div class="mobile-menu-container">
+                <div class="mobile-menu-wrapper">
+                    <span class="mobile-menu-close"><i class="icon-close"></i></span>
+
+                    <form action="#" method="get" class="mobile-search">
+                        <label for="mobile-search" class="sr-only">Buscar</label>
+                        <input type="search" class="form-control" name="mobile-search" id="mobile-search"
+                            placeholder="Search in..." required>
+                        <button class="btn btn-primary" type="submit"><i class="icon-search"></i></button>
+                    </form>
+
+                    <nav class="mobile-nav">
+                        <ul class="mobile-menu">
+                            <li class="active">
+                                <a href="index.html">Home</a>
+
+                                <ul>
+                                    <li><a href="index-1.html">01 - furniture store</a></li>
+                                    <li><a href="index-2.html">02 - furniture store</a></li>
+                                    <li><a href="index-3.html">03 - electronic store</a></li>
+                                    <li><a href="index-4.html">04 - electronic store</a></li>
+                                    <li><a href="index-5.html">05 - fashion store</a></li>
+                                    <li><a href="index-6.html">06 - fashion store</a></li>
+                                    <li><a href="index-7.html">07 - fashion store</a></li>
+                                    <li><a href="index-8.html">08 - fashion store</a></li>
+                                    <li><a href="index-9.html">09 - fashion store</a></li>
+                                    <li><a href="index-10.html">10 - shoes store</a></li>
+                                    <li><a href="index-11.html">11 - furniture simple store</a></li>
+                                    <li><a href="index-12.html">12 - fashion simple store</a></li>
+                                    <li><a href="index-13.html">13 - market</a></li>
+                                    <li><a href="index-14.html">14 - market fullwidth</a></li>
+                                    <li><a href="index-15.html">15 - lookbook 1</a></li>
+                                    <li><a href="index-16.html">16 - lookbook 2</a></li>
+                                    <li><a href="index-17.html">17 - fashion store</a></li>
+                                    <li><a href="index-18.html">18 - fashion store (with sidebar)</a></li>
+                                    <li><a href="index-19.html">19 - games store</a></li>
+                                    <li><a href="index-20.html">20 - book store</a></li>
+                                    <li><a href="index-21.html">21 - sport store</a></li>
+                                    <li><a href="index-22.html">22 - tools store</a></li>
+                                    <li><a href="index-23.html">23 - fashion left navigation store</a></li>
+                                    <li><a href="index-24.html">24 - extreme sport store</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="category.html">Shop</a>
+                                <ul>
+                                    <li><a href="category-list.html">Shop List</a></li>
+                                    <li><a href="category-2cols.html">Shop Grid 2 Columns</a></li>
+                                    <li><a href="category.html">Shop Grid 3 Columns</a></li>
+                                    <li><a href="category-4cols.html">Shop Grid 4 Columns</a></li>
+                                    <li><a href="category-boxed.html"><span>Shop Boxed No Sidebar<span
+                                                    class="tip tip-hot">Hot</span></span></a></li>
+                                    <li><a href="category-fullwidth.html">Shop Fullwidth No Sidebar</a></li>
+                                    <li><a href="product-category-boxed.html">Product Category Boxed</a></li>
+                                    <li><a href="product-category-fullwidth.html"><span>Product Category Fullwidth<span
+                                                    class="tip tip-new">New</span></span></a></li>
+                                    <li><a href="cart.html">Cart</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                    <li><a href="#">Lookbook</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="product.html" class="sf-with-ul">Product</a>
+                                <ul>
+                                    <li><a href="product.html">Default</a></li>
+                                    <li><a href="product-centered.html">Centered</a></li>
+                                    <li><a href="product-extended.html"><span>Extended Info<span
+                                                    class="tip tip-new">New</span></span></a></li>
+                                    <li><a href="product-gallery.html">Gallery</a></li>
+                                    <li><a href="product-sticky.html">Sticky Info</a></li>
+                                    <li><a href="product-sidebar.html">Boxed With Sidebar</a></li>
+                                    <li><a href="product-fullwidth.html">Full Width</a></li>
+                                    <li><a href="product-masonry.html">Masonry Sticky Info</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Pages</a>
+                                <ul>
+                                    <li>
+                                        <a href="about.html">About</a>
+
+                                        <ul>
+                                            <li><a href="about.html">About 01</a></li>
+                                            <li><a href="about-2.html">About 02</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contact</a>
+
+                                        <ul>
+                                            <li><a href="contact.html">Contact 01</a></li>
+                                            <li><a href="contact-2.html">Contact 02</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="faq.html">FAQs</a></li>
+                                    <li><a href="404.html">Error 404</a></li>
+                                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="blog.html">Blog</a>
+
+                                <ul>
+                                    <li><a href="blog.html">Classic</a></li>
+                                    <li><a href="blog-listing.html">Listing</a></li>
+                                    <li>
+                                        <a href="#">Grid</a>
+                                        <ul>
+                                            <li><a href="blog-grid-2cols.html">Grid 2 columns</a></li>
+                                            <li><a href="blog-grid-3cols.html">Grid 3 columns</a></li>
+                                            <li><a href="blog-grid-4cols.html">Grid 4 columns</a></li>
+                                            <li><a href="blog-grid-sidebar.html">Grid sidebar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Masonry</a>
+                                        <ul>
+                                            <li><a href="blog-masonry-2cols.html">Masonry 2 columns</a></li>
+                                            <li><a href="blog-masonry-3cols.html">Masonry 3 columns</a></li>
+                                            <li><a href="blog-masonry-4cols.html">Masonry 4 columns</a></li>
+                                            <li><a href="blog-masonry-sidebar.html">Masonry sidebar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Mask</a>
+                                        <ul>
+                                            <li><a href="blog-mask-grid.html">Blog mask grid</a></li>
+                                            <li><a href="blog-mask-masonry.html">Blog mask masonry</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Publicacion Unica</a>
+                                        <ul>
+                                            <li><a href="single.html">Predeterminado con barra lateral</a></li>
+                                            <li><a href="single-fullwidth.html">Ancho completo sin barra</a></li>
+                                            <li><a href="single-fullwidth-sidebar.html">Ancho completo con barra</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="elements-list.html">Elementos</a>
+                                <ul>
+                                    <li><a href="elements-products.html">Productos</a></li>
+                                    <li><a href="elements-typography.html">Typography</a></li>
+                                    <li><a href="elements-titles.html">Titles</a></li>
+                                    <li><a href="elements-banners.html">Banners</a></li>
+                                    <li><a href="elements-product-category.html">Product Category</a></li>
+                                    <li><a href="elements-video-banners.html">Video Banners</a></li>
+                                    <li><a href="elements-buttons.html">Buttons</a></li>
+                                    <li><a href="elements-accordions.html">Accordions</a></li>
+                                    <li><a href="elements-tabs.html">Tabs</a></li>
+                                    <li><a href="elements-testimonials.html">Testimonials</a></li>
+                                    <li><a href="elements-blog-posts.html">Blog Posts</a></li>
+                                    <li><a href="elements-portfolio.html">Portfolio</a></li>
+                                    <li><a href="elements-cta.html">Call to Action</a></li>
+                                    <li><a href="elements-icon-boxes.html">Icon Boxes</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav><!-- End .mobile-nav -->
+
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" target="_blank" title="Facebook"><i
+                                class="icon-facebook-f"></i></a>
+                        <a href="#" class="social-icon" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
+                        <a href="#" class="social-icon" target="_blank" title="Instagram"><i
+                                class="icon-instagram"></i></a>
+                        <a href="#" class="social-icon" target="_blank" title="Youtube"><i class="icon-youtube"></i></a>
+                    </div><!-- fin .social-icons -->
+                </div><!-- fin .mobile-menu-wrapper -->
+            </div><!-- fin .mobile-menu-container -->
+
+            <!-- Ingresar/ Register Modal  En esta parte vas a ingresar tus datos-->
+            <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"><i class="icon-close"></i></span>
+                            </button>
+
+                            <div class="form-box">
+                                <div class="form-tab">
+                                    <ul class="nav nav-pills nav-fill" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin"
+                                                role="tab" aria-controls="signin" aria-selected="true">Iniciar
+                                                seccion</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="register-tab" data-toggle="tab" href="#register"
+                                                role="tab" aria-controls="register" aria-selected="false">Registrar</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="tab-content-5">
+                                        <div class="tab-pane fade show active" id="signin" role="tabpanel"
+                                            aria-labelledby="signin-tab">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <label for="singin-email">Nombre o direccion de correo *</label>
+                                                    <input type="text" class="form-control" id="singin-email"
+                                                        name="singin-email" required>
+                                                </div><!-- End .form-group -->
+
+                                                <div class="form-group">
+                                                    <label for="singin-password">Contraseña *</label>
+                                                    <input type="password" class="form-control" id="singin-password"
+                                                        name="singin-password" required>
+                                                </div><!-- End .form-group -->
+
+                                                <div class="form-footer">
+                                                    <button type="submit" class="btn btn-outline-primary-2">
+                                                        <span>ACCEDER</span>
+                                                        <i class="icon-long-arrow-right"></i>
+                                                    </button>
+
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="signin-remember">
+                                                        <label class="custom-control-label"
+                                                            for="signin-remember">Recordarme</label>
+                                                    </div><!-- End .custom-checkbox -->
+
+                                                    <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                                                </div><!-- End .form-footer -->
+                                            </form>
+                                            <div class="form-choice">
+                                                <p class="text-center">o inicia seccion con</p>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <a href="#" class="btn btn-login btn-g">
+                                                            <i class="icon-google"></i>
+                                                            Abrir con Google
+                                                        </a>
+                                                    </div><!-- End .col-6 -->
+                                                    <div class="col-sm-6">
+                                                        <a href="#" class="btn btn-login btn-f">
+                                                            <i class="icon-facebook-f"></i>
+                                                            Abrir con Facebook
+                                                        </a>
+                                                    </div><!-- End .col-6 -->
+                                                </div><!-- End .row -->
+                                            </div><!-- End .form-choice -->
+                                        </div><!-- .End .tab-pane -->
+                                        <div class="tab-pane fade" id="register" role="tabpanel"
+                                            aria-labelledby="register-tab">
+                                            <form action="#">
+                                                <div class="form-group">
+                                                    <label for="register-email">Su dirreccion de correo
+                                                        electronico*</label>
+                                                    <input type="email" class="form-control" id="register-email"
+                                                        name="register-email" required>
+                                                </div><!-- End .form-group -->
+
+                                                <div class="form-group">
+                                                    <label for="register-password">Contraseña *</label>
+                                                    <input type="password" class="form-control" id="register-password"
+                                                        name="register-password" required>
+                                                </div><!-- End .form-group -->
+
+                                                <div class="form-footer">
+                                                    <button type="submit" class="btn btn-outline-primary-2">
+                                                        <span>REGISTRARSE</span>
+                                                        <i class="icon-long-arrow-right"></i>
+                                                    </button>
+
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="register-policy" required>
+                                                        <label class="custom-control-label" for="register-policy">Estoy
+                                                            de acuerdo con la <a href="#">política de publicidad</a>
+                                                            *</label>
+                                                    </div><!-- End .custom-checkbox -->
+                                                </div><!-- End .form-footer -->
+                                            </form>
+                                            <div class="form-choice">
+                                                <p class="text-center">o inicia seccion con</p>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <a href="#" class="btn btn-login btn-g">
+                                                            <i class="icon-google"></i>
+                                                            Abrir con Google
+                                                        </a>
+                                                    </div><!-- End .col-6 -->
+                                                    <div class="col-sm-6">
+                                                        <a href="#" class="btn btn-login  btn-f">
+                                                            <i class="icon-facebook-f"></i>
+                                                            Abrir con Facebook
+                                                        </a>
+                                                    </div><!-- End .col-6 -->
+                                                </div><!-- End .row -->
+                                            </div><!-- End .form-choice -->
+                                        </div><!-- .End .tab-pane -->
+                                    </div><!-- End .tab-content -->
+                                </div><!-- End .form-tab -->
+                            </div><!-- End .form-box -->
+                        </div><!-- End .modal-body -->
+                    </div><!-- End .modal-content -->
+                </div><!-- End .modal-dialog -->
+            </div><!-- End .modal -->
+
+            <!-- Plugins JS File -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/bootstrap.bundle.min.js"></script>
+            <script src="assets/js/jquery.hoverIntent.min.js"></script>
+            <script src="assets/js/jquery.waypoints.min.js"></script>
+            <script src="assets/js/superfish.min.js"></script>
+            <script src="assets/js/owl.carousel.min.js"></script>
+            <!-- Main JS File -->
+            <script src="assets/js/main.js"></script>
 </body>
+
 </html>

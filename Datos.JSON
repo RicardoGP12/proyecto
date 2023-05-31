@@ -2,21 +2,25 @@
     {
         "id": 1,
         "nombre": "Harry",
-        "email": "harry@bluuweb.cl"
+        "email": "harry@bluuweb.cl",
+        "contraseña": "123456"
     },
     {
         "id": 2,
         "nombre": "Debra",
-        "email": "deb@bluuweb.cl"
+        "email": "deb@bluuweb.cl",
+        "contraseña": "123456"
     },
     {
         "id": 3,
         "nombre": "Dexter",
-        "email": "dex@bluuweb.cl"
+        "email": "dex@bluuweb.cl",
+        "contraseña": "123456"
     },
     {
         "id": 4,
         "nombre": "Rita",
-        "email": "rita@bluuweb.cl"
+        "email": "rita@bluuweb.cl",
+        "contraseña": "123456"
     }
 ]

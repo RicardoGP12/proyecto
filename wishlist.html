@@ -37,6 +37,7 @@
 
   gtag('config', 'G-7JHKHEEV80');
 </script>
+<script src="Carrito2.js"></script>
 <body>
     <div class="page-wrapper">
         <header class="header">
@@ -179,77 +180,25 @@
                 </div><!-- End .container -->
             </nav><!-- End .breadcrumb-nav -->
 
-            <div class="page-content">
-            	<div class="container">
-					<table class="table table-wishlist table-mobile">
-						<thead>
-							<tr>
-								<th>Producto</th>
-								<th>Precio</th>
-								<th>Cantidad</th>
-								<th></th>
-								<th></th>
-							</tr>
-						</thead>
-
-						<tbody>
-							<tr>
-								<td class="product-col">
-									<div class="product">
-										<figure class="product-media">
-											<a href="#">
-												<img src="assets/images/demos/demo-4/products/product-6.jpg" alt="Product image">
-											</a>
-										</figure>
-
-										<h3 class="product-title">
-											<a href="#">Chilaquiles Verdes con queso</a>
-										</h3><!-- End .product-title -->
-									</div><!-- End .product -->
-								</td>
-								<td class="price-col">$39.99</td>
-								<td class="stock-col"><span class="in-stock">En venta</span></td>
-								<td class="action-col">
-									<button class="btn btn-block btn-outline-primary-2"><i class="icon-cart-plus"></i>Añadir al carrito</button>
-								</td>
-								<td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
-							</tr>
-							<tr>
-								<td class="product-col">
-									<div class="product">
-										<figure class="product-media">
-											<a href="#">
-												<img src="assets/images/demos/demo-4/products/product-3.jpg" alt="Product image">
-											</a>
-										</figure>
-
-										<h3 class="product-title">
-											<a href="#">Coca-Cola Original Refresco Lata 235 ml</a>
-										</h3><!-- End .product-title -->
-									</div><!-- End .product -->
-								</td>
-								<td class="price-col">$14.99</td>
-								<td class="stock-col"><span class="in-stock">En venta</span></td>
-								<td class="action-col">
-									<button class="btn btn-block btn-outline-primary-2"><i class="icon-cart-plus"></i>Añadir al carrito</button>
-								</td>
-								<td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
-							</tr>
-							
-						</tbody>
-					</table><!-- End .table table-wishlist -->
-	            	<div class="wishlist-share">
-	            		<div class="social-icons social-icons-sm mb-2">
-	            			<label class="social-label">Share on:</label>
-	    					<a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
-	    					<a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
-	    					<a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
-	    					<a href="#" class="social-icon" title="Youtube" target="_blank"><i class="icon-youtube"></i></a>
-	    					<a href="#" class="social-icon" title="Pinterest" target="_blank"><i class="icon-pinterest"></i></a>
-	    				</div><!-- End .soial-icons -->
-	            	</div><!-- End .wishlist-share -->
-            	</div><!-- End .container -->
-            </div><!-- End .page-content -->
+            <div class="container">
+                <div class="row">
+                    <!-- Elementos generados a partir del JSON -->
+                    <main id="items" class="col-sm-8 row"></main>
+                    <!-- Carrito -->
+                    <aside class="col-sm-4">
+                        <h2>Lista de Deseos</h2>
+                        <!-- Elementos del carrito -->
+                        <ul id="carrito" class="list-group"></ul>
+                        <hr>
+                        <!-- Precio total -->
+                        <p class="text-right">Total: <span id="total"></span>&euro;</p>
+                        <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                        <a href="cart.html" class="btn btn-outline-primary-2 btn-order btn-block">Ir al carrito</a>
+                        <div id="paypal-button-container"></div>
+                    </aside>
+                    <br/>
+                </div>
+            </div>
         </main><!-- End .main -->
 
         <footer class="footer">
