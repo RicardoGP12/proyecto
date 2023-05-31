@@ -182,15 +182,21 @@ $json_data = $master->get_all_data();
                         <?php endif; ?>
                     <?php endif; ?>
                     <!-- DataTales Example -->
+                    <style>
+                        .boton {
+                            float: right;
+                        }
+                    </style>
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Productos</h6>
+                            <h3 class="m-0 font-weight-bold text-primary">Productos</h3>
+                            <a class="btn btn-danger btn-sm btn-flat boton" href="adduser.php"><i class="fa fa-plus-square"></i> Agregar Usuario</a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">   
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
-                                        <tr>
+                                    <tr>
                                             <th class="text-center">ID</th>
                                             <th class="text-center">Nombre</th>
                                             <th class="text-center">Correo electrónico</th>
@@ -219,7 +225,7 @@ $json_data = $master->get_all_data();
                                                 <td><?= $data->perfil ?></td>
                                                 <td><?= $data->estado ?></td>
                                                 <td class="text-center">
-                                                    <a href="member_form.php?id=<?= $data->id ?>" class="btn btn-sm btn-outline-info rounded-0">
+                                                    <a href="adduser.php?id=<?= $data->id ?>" class="btn btn-sm btn-outline-info rounded-0">
                                                         <i class="fa-solid fa-edit"></i>
                                                     </a>
                                                     <a href="delete_data.php?id=<?= $data->id ?>" class="btn btn-sm btn-outline-danger rounded-0" onclick="if(confirm(`¿Deseas eliminar del registro a <?= $data->name ?>?`) === false) event.preventDefault();">
