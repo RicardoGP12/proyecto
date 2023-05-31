@@ -14,9 +14,12 @@
         },
         {
             "id":3,
-            "name": "Zoila Mesa",
+            "name": "Zoila Meza",
             "email":"zorayamacuayer@outlook.com",
             "address":"Juan de Montoro #216 Ojo Caliente"
         }
-    ]
+    ],
+    "profile": {
+        "name": "CoffeSmart"
+      }
 }
