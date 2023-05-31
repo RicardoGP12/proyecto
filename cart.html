@@ -203,6 +203,7 @@
                     <br/>
                     <div id="paypal-button-container"></div>
                     <script>
+                        //console.log(localStorage.getItem("total"))
                         // Render the PayPal button into #paypal-button-container
                         paypal.Buttons({
                             style: {
@@ -212,7 +213,7 @@
                             return actions.order.create({
                                 purchase_units: [{
                                     amount: {
-                                        value: 14.99
+                                        value: localStorage.getItem("aa")
                                     }
                                 }]
                             })
