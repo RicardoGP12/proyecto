@@ -95,6 +95,7 @@
         document.getElementById("MAS").style.display = "none";
     }
 </script>
+<script src="c.js"></script>
 
 
 <body>
@@ -159,7 +160,7 @@
 
                     <div class="header-right">
                         <div class="wishlist">
-                            <a href="wishlist.html" title="Wishlist">
+                            <a href="wishlist.html"  onclick="guardar()" title="Wishlist">
                                 <div class="icon">
                                     <i class="icon-heart-o"></i>
                                     <span class="wishlist-count badge">3</span>
@@ -181,7 +182,7 @@
                             <div class="dropdown-menu dropdown-menu-right">
 
                                 <div class="dropdown-cart-action">
-                                    <a title="cart" href="cart.html" class="btn btn-primary">Ver Carrito</a>
+                                    <a title="cart" href="cart.html" class="btn btn-primary" onclick="guardar()">Ver Carrito</a>
                                     <a title="15" href="checkout.html"
                                         class="btn btn-outline-primary-2"><span>Comprar</span><i
                                             class="icon-long-arrow-right"></i></a>
@@ -368,10 +369,10 @@
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a title="12" href="#" class="btn-product btn-cart"
+                                        <a title="12" onclick="DWBacon()" class="btn-product btn-cart"
                                             title="Add to cart"><span>add to cart</span></a>
-                                        <a title="12" href="popup/quickView.html" class="btn-product btn-quickview"
-                                            title="Quick view"><span>quick view</span></a>
+                                        <a title="12"   class="btn-product-icon btn-wishlist"
+                                           onclick="DWBacon()" title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
 
@@ -407,9 +408,9 @@
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a title="21" href="#" class="btn-product btn-cart"
+                                        <a title="21" onclick="Takis()" class="btn-product btn-cart"
                                             title="Add to cart"><span>add to cart</span></a>
-                                        <a title="21" href="popup/quickView.html" class="btn-product btn-quickview"
+                                        <a title="21" onclick="Takis()" class="btn-product-icon btn-wishlist"
                                             title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
@@ -445,9 +446,9 @@
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                        <a href="#" onclick="Coca235()" class="btn-product btn-cart" title="Add to cart"><span>add to
                                                 cart</span></a>
-                                        <a title="21" href="popup/quickView.html" class="btn-product btn-quickview"
+                                        <a title="21" onclick="Coca235()" class="btn-product-icon btn-wishlist"
                                             title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
@@ -484,9 +485,9 @@
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a title="21" href="#" class="btn-product btn-cart"
+                                        <a title="21" onclick="Coca500()" class="btn-product btn-cart"
                                             title="Add to cart"><span>add to cart</span></a>
-                                        <a title="21" href="popup/quickView.html" class="btn-product btn-quickview"
+                                        <a title="21"  onclick="Coca500()" class="btn-product-icon btn-wishlist"
                                             title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
@@ -523,9 +524,9 @@
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                        <a onclick="CR()" class="btn-product btn-cart" title="Add to cart"><span>add to
                                                 cart</span></a>
-                                        <a title="21" href="popup/quickView.html" class="btn-product btn-quickview"
+                                        <a title="21" onclick="CR()" class="btn-product-icon btn-wishlist"
                                             title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
@@ -561,9 +562,9 @@
                                     </div><!-- End .product-action -->
 
                                     <div class="product-action">
-                                        <a href="#" class="btn-product btn-cart" title="Add to cart"><span>add to
+                                        <a onclick="CV()" class="btn-product btn-cart" title="Add to cart"><span>add to
                                                 cart</span></a>
-                                        <a href="popup/quickView.html" class="btn-product btn-quickview"
+                                        <a onclick="CV()" class="btn-product-icon btn-wishlist"
                                             title="Quick view"><span>quick view</span></a>
                                     </div><!-- End .product-action -->
                                 </figure><!-- End .product-media -->
