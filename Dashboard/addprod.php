@@ -107,7 +107,7 @@ $data = $master->get_data(isset($_GET['id']) ? $_GET['id'] : '');
                             </div>
                         </div>
                         <div class="card-footer text-center">
-                            <button class="btn btn-danger rounded-0" form="addprod" href="crudprod.php" ><i class="fa-solid fa-save"></i> Guardar Producto</button>
+                            <button class="btn btn-danger rounded-0" form="#" href="crudprod.php" ><i class="fa-solid fa-save"></i> Guardar Producto</button>
                             <a class="btn btn-light border rounded-0" href="crudprod.php"><i class="fa-solid fa-times"></i> Cancelar</a>
                         </div>
                     </div>

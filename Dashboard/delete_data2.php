@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('master2.php');
+require_once('#');
 $master = new Master();
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 if(empty($id)){
