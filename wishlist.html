@@ -181,22 +181,8 @@
             </nav><!-- End .breadcrumb-nav -->
 
             <div class="container">
-                <div class="row">
-                    <!-- Elementos generados a partir del JSON -->
-                    <main id="items" class="col-sm-8 row"></main>
-                    <!-- Carrito -->
-                    <aside class="col-sm-4">
-                        <h2>Lista de Deseos</h2>
-                        <!-- Elementos del carrito -->
-                        <ul id="carrito" class="list-group"></ul>
-                        <hr>
-                        <!-- Precio total -->
-                        <p class="text-right">Total: <span id="total"></span>&euro;</p>
-                        <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-                        <a href="cart.html" class="btn btn-outline-primary-2 btn-order btn-block">Ir al carrito</a>
-                        <div id="paypal-button-container"></div>
-                    </aside>
-                    <br/>
+                <div id="lista">
+
                 </div>
             </div>
         </main><!-- End .main -->
@@ -532,6 +518,33 @@
     </div><!-- End .modal -->
 
     <!-- Plugins JS File -->
+
+    <script>
+
+        console.log(localStorage.getItem("Total"));
+
+        let carrito2  
+        carrito2 = JSON.parse(localStorage.getItem('Carrito'));
+
+        console.log(carrito2);
+    
+        let modeloTabla='<table >';
+            modeloTabla= modeloTabla+'<tr><th>Imagen</th><th>Nombre</th>';
+                carrito2.forEach(p => {
+                    //console.log(p);
+                    modeloTabla=modeloTabla+'<tr>';
+                        modeloTabla=modeloTabla+'<td>'+'<img src='+p.imagen+' width="150" height="150"></td>'
+                        modeloTabla=modeloTabla+'<td>'+p.nombre+'&nbsp;&nbsp;&nbsp;'+'</td>'
+                        modeloTabla=modeloTabla+'</tr>'
+                });
+
+            modeloTabla = modeloTabla+ '</table>';
+    
+            document.getElementById('lista').innerHTML= modeloTabla
+    
+    
+    </script>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.hoverIntent.min.js"></script>

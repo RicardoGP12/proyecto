@@ -41,6 +41,8 @@
 
   gtag('config', 'G-7JHKHEEV80');
 </script>
+
+
 <body>
     <div class="page-wrapper">
         <header class="header">
@@ -185,21 +187,20 @@
             </nav><!-- End .breadcrumb-nav -->
 
             <div class="container">
-                <div class="row">
+                <div id="lista">
+
+                    </div>
+                    <div>
+                        <p >El total es: <p id="t">$</p></p>
+                        <script>
+                             document.getElementById('t').innerHTML = localStorage.getItem("Total") ;
+                        </script>
+                    </div>
+                    <div class="row">
                     <!-- Elementos generados a partir del JSON -->
                     <main id="items" class="col-sm-8 row"></main>
                     <!-- Carrito -->
-                    <aside class="col-sm-4">
-                        <h2>Carrito</h2>
-                        <!-- Elementos del carrito -->
-                        <ul id="carrito" class="list-group"></ul>
-                        <hr>
-                        <!-- Precio total -->
-                        <p class="text-right">Total: <span id="total"></span>&euro;</p>
-                        <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-                        <a href="checkout.html" class="btn btn-outline-primary-2 btn-order btn-block">Continuar</a>
-                        <div id="paypal-button-container"></div>
-                    </aside>
+                    
                     <br/>
                     <div id="paypal-button-container"></div>
                     <script>
@@ -213,7 +214,7 @@
                             return actions.order.create({
                                 purchase_units: [{
                                     amount: {
-                                        value: localStorage.getItem("aa")
+                                        value: localStorage.getItem("Total")
                                     }
                                 }]
                             })
@@ -294,6 +295,32 @@
 
 	      
     <!-- Plugins JS File -->
+    <script>
+
+        console.log(localStorage.getItem("Total"));
+
+        let carrito2  
+        carrito2 = JSON.parse(localStorage.getItem('Carrito'));
+
+        console.log(carrito2);
+    
+        let modeloTabla='<table >';
+            modeloTabla= modeloTabla+'<tr><th>Imagen</th><th>Nombre</th><th>Precio</th>';
+                carrito2.forEach(p => {
+                    //console.log(p);
+                    modeloTabla=modeloTabla+'<tr>';
+                        modeloTabla=modeloTabla+'<td>'+'<img src='+p.imagen+' width="150" height="150"></td>'
+                        modeloTabla=modeloTabla+'<td>'+p.nombre+'&nbsp;&nbsp;&nbsp;'+'</td>'
+                        modeloTabla=modeloTabla+'<td>'+p.precio+'$'+'</td>'
+                        modeloTabla=modeloTabla+'</tr>'
+                });
+
+            modeloTabla = modeloTabla+ '</table>';
+    
+            document.getElementById('lista').innerHTML= modeloTabla
+    
+    
+    </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.hoverIntent.min.js"></script>
