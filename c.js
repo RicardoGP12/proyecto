@@ -41,7 +41,7 @@ function Takis(){
 function Coca235(){
     const ham = carrito.push({ 
     nombre: 'Coca-Cola Original Refresco Lata 235 ml',
-    precio: 14.99,
+    precio: 15,
     imagen: 'assets/images/demos/demo-4/products/product-3.jpg'})
     window.alert('Se agrego :)')
     console.log(carrito);
@@ -49,7 +49,7 @@ function Coca235(){
 function Coca500(){
     const ham = carrito.push({ 
     nombre: 'Coca Cola Normal De 500 Ml Pet',
-    precio: 14.99,
+    precio: 15,
     imagen: 'assets/images/demos/demo-4/products/product-4.jpg'})
     window.alert('Se agrego :)')
     console.log(carrito);
@@ -58,7 +58,7 @@ function Coca500(){
 function CR(){
     const ham = carrito.push({ 
     nombre: 'Chilasquiles rojos',
-    precio: 39.99,
+    precio: 40,
     imagen: 'assets/images/demos/demo-4/products/product-5.jpg'})
     window.alert('Se agrego :)')
     console.log(carrito);
@@ -67,7 +67,7 @@ function CR(){
 function CV(){
     const ham = carrito.push({
     nombre: 'Chulaquiles verdes',
-    precio: 39.99,
+    precio: 40,
     imagen: 'assets/images/demos/demo-4/products/product-6.jpg'})
     window.alert('Se agrego :)')
     console.log(carrito);
